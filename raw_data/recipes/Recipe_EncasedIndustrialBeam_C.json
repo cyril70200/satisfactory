@@ -1,0 +1,60 @@
+{
+    "name": "Encased Industrial Beam",
+    "time": 10.0,
+    "ingredients": [
+        {
+            "item": "Desc_SteelPlate_C",
+            "amount": 3,
+            "rate": 18.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SteelBeam_C",
+                    "factor": 1.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelBeam_Molded_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelBeam_Aluminum_C",
+                    "factor": 0.75
+                }
+            ]
+        },
+        {
+            "item": "Desc_Cement_C",
+            "amount": 6,
+            "rate": 36.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_WetConcrete_C",
+                    "factor": 0.45
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RubberConcrete_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Concrete_C",
+                    "factor": 0.72
+                },
+                {
+                    "recipe_id": "Recipe_Concrete_C",
+                    "factor": 2.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SteelPlateReinforced_C",
+            "amount": 1,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_EncasedIndustrialBeam_C"
+}

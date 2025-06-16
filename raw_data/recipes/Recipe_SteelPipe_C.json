@@ -1,0 +1,40 @@
+{
+    "name": "Steel Pipe",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_SteelIngot_C",
+            "amount": 3,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotSteel_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CokeSteelIngot_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotSteel_2_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotSteel_1_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SteelPipe_C",
+            "amount": 2,
+            "rate": 20.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_SteelPipe_C"
+}

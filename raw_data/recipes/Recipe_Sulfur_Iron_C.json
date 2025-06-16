@@ -1,0 +1,33 @@
+{
+    "name": "Sulfur (Iron)",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_SAMIngot_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotSAM_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_OreIron_C",
+            "amount": 30,
+            "rate": 300.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Sulfur_C",
+            "amount": 12,
+            "rate": 120.0
+        }
+    ],
+    "machine": "Build_Converter_C",
+    "power_use": 250.0
+}

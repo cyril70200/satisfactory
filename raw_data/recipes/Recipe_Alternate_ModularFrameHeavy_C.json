@@ -1,0 +1,96 @@
+{
+    "name": "Alternate: Heavy Encased Frame",
+    "time": 64.0,
+    "ingredients": [
+        {
+            "item": "Desc_ModularFrame_C",
+            "amount": 8,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_ModularFrame_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_BoltedFrame_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ModularFrame_C",
+                    "factor": 2.6666666666666665
+                }
+            ]
+        },
+        {
+            "item": "Desc_SteelPlateReinforced_C",
+            "amount": 10,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_EncasedIndustrialBeam_C",
+                    "factor": 1.6666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_EncasedIndustrialBeam_C",
+                    "factor": 2.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_SteelPipe_C",
+            "amount": 36,
+            "rate": 36.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SteelPipe_C",
+                    "factor": 1.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Molded_C",
+                    "factor": 0.72
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Iron_C",
+                    "factor": 1.44
+                }
+            ]
+        },
+        {
+            "item": "Desc_Cement_C",
+            "amount": 22,
+            "rate": 22.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_WetConcrete_C",
+                    "factor": 0.275
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RubberConcrete_C",
+                    "factor": 0.24444444444444444
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Concrete_C",
+                    "factor": 0.44
+                },
+                {
+                    "recipe_id": "Recipe_Concrete_C",
+                    "factor": 1.4666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameHeavy_C",
+            "amount": 3,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_ModularFrameHeavy_C"
+}

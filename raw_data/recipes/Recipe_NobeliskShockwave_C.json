@@ -1,0 +1,43 @@
+{
+    "name": "Pulse Nobelisk",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_NobeliskExplosive_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Nobelisk_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_NobeliskShockwave_C",
+            "amount": 5,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Dark Matter Residue",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_SAMIngot_C",
+            "amount": 5,
+            "rate": 50.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotSAM_C",
+                    "factor": 1.6666666666666667
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 10.0,
+            "rate": 100.0
+        }
+    ],
+    "machine": "Build_Converter_C",
+    "power_use": 250.0,
+    "recipe_id": "Recipe_DarkEnergy_C"
+}

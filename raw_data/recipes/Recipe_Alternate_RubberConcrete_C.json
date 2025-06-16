@@ -1,0 +1,42 @@
+{
+    "name": "Alternate: Rubber Concrete",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_Stone_C",
+            "amount": 10,
+            "rate": 100.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 2,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Cement_C",
+            "amount": 9,
+            "rate": 90.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_RubberConcrete_C"
+}

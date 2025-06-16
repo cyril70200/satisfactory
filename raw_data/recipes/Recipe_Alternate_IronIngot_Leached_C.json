@@ -1,0 +1,38 @@
+{
+    "name": "Alternate: Leached Iron ingot",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreIron_C",
+            "amount": 5,
+            "rate": 50.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 1.0,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_SulfuricAcid_C",
+                    "factor": 0.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronIngot_C",
+            "amount": 10,
+            "rate": 100.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_IronIngot_Leached_C"
+}

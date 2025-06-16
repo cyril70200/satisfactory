@@ -1,0 +1,46 @@
+{
+    "name": "Alternate: Pink Diamonds",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_Coal_C",
+            "amount": 8,
+            "rate": 120.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_QuartzCrystal_C",
+            "amount": 3,
+            "rate": 45.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureQuartzCrystal_C",
+                    "factor": 0.8035714285714286
+                },
+                {
+                    "recipe_id": "Recipe_QuartzCrystal_C",
+                    "factor": 1.875
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Purified_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Fused_C",
+                    "factor": 0.8333333333333334
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Diamond_C",
+            "amount": 1,
+            "rate": 15.0
+        }
+    ],
+    "machine": "Build_Converter_C",
+    "power_use": 250.0,
+    "recipe_id": "Recipe_Alternate_Diamond_Pink_C"
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Unpackage Oil",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_PackagedOil_C",
+            "amount": 2,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PackagedCrudeOil_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_LiquidOil_C",
+            "amount": 2.0,
+            "rate": 60.0
+        },
+        {
+            "item": "Desc_FluidCanister_C",
+            "amount": 2,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0
+}

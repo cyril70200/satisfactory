@@ -1,0 +1,77 @@
+{
+    "name": "Neural-Quantum Processor",
+    "time": 20.0,
+    "ingredients": [
+        {
+            "item": "Desc_TimeCrystal_C",
+            "amount": 5,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_TimeCrystal_C",
+                    "factor": 2.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_ComputerSuper_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_ComputerSuper_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SuperStateComputer_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_OCSupercomputer_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_FicsiteMesh_C",
+            "amount": 15,
+            "rate": 45.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_FicsiteMesh_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumEnergy_C",
+            "amount": 25.0,
+            "rate": 75.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_QuantumEnergy_C",
+                    "factor": 0.375
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_TemporalProcessor_C",
+            "amount": 1,
+            "rate": 3.0
+        },
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 25.0,
+            "rate": 75.0
+        }
+    ],
+    "machine": "Build_QuantumEncoder_C",
+    "power_use": 1000.0,
+    "recipe_id": "Recipe_TemporalProcessor_C"
+}

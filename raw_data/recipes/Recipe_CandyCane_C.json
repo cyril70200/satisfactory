@@ -1,0 +1,22 @@
+{
+    "name": "Candy Cane",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_Gift_C",
+            "amount": 3,
+            "rate": 15.0,
+            "resource": false
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CandyCane_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_CandyCane_C"
+}

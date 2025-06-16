@@ -1,0 +1,28 @@
+{
+    "name": "Alternate: Pure Copper Ingot",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreCopper_C",
+            "amount": 6,
+            "rate": 18.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 4.0,
+            "rate": 12.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CopperIngot_C",
+            "amount": 15,
+            "rate": 45.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_PureCopperIngot_C"
+}

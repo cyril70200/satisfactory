@@ -1,0 +1,85 @@
+{
+    "name": "Non-Fissile Uranium",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_NuclearWaste_C",
+            "amount": 15,
+            "rate": 45.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Build_GeneratorNuclear_C_Desc_NuclearFuelRod_C",
+                    "factor": 0.9
+                }
+            ]
+        },
+        {
+            "item": "Desc_Silica_C",
+            "amount": 10,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminaSolution_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_Silica_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_Distilled_C",
+                    "factor": 0.1111111111111111
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_C",
+                    "factor": 0.5357142857142857
+                }
+            ]
+        },
+        {
+            "item": "Desc_NitricAcid_C",
+            "amount": 6.0,
+            "rate": 18.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_NitricAcid_C",
+                    "factor": 0.6
+                }
+            ]
+        },
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 6.0,
+            "rate": 18.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 1.8
+                },
+                {
+                    "recipe_id": "Recipe_SulfuricAcid_C",
+                    "factor": 0.36
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_NonFissibleUranium_C",
+            "amount": 20,
+            "rate": 60.0
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 6.0,
+            "rate": 18.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_NonFissileUranium_C"
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Biomass Burner (Wood)",
+    "time": 3.3333333333333335,
+    "ingredients": [
+        {
+            "item": "Desc_Wood_C",
+            "amount": 1,
+            "rate": 18.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 1.6666666666666667,
+            "rate": 30.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 1.6666666666666667,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_GeneratorBiomass_Automated_C",
+    "power_use": 0.0
+}

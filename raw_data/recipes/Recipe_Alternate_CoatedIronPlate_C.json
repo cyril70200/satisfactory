@@ -1,0 +1,64 @@
+{
+    "name": "Alternate: Coated Iron Plate",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronIngot_C",
+            "amount": 5,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotIron_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PureIronIngot_C",
+                    "factor": 0.6153846153846154
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IronIngot_Leached_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IronIngot_Basic_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotIron_C",
+                    "factor": 0.5333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 1,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.13333333333333333
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronPlate_C",
+            "amount": 10,
+            "rate": 80.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_CoatedIronPlate_C"
+}

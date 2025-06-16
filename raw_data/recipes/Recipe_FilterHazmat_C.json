@@ -1,0 +1,59 @@
+{
+    "name": "Iodine-Infused Filter",
+    "time": 16.0,
+    "ingredients": [
+        {
+            "item": "Desc_Filter_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_FilterGasMask_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 8,
+            "rate": 32.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 0.5333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 0.06666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 0.03333333333333333
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_HazmatFilter_C",
+            "amount": 1,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Solid Biofuel",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_GenericBiomass_C",
+            "amount": 8,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Biomass_Mycelia_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_AlienProtein_C",
+                    "factor": 0.08
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_Leaves_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_Wood_C",
+                    "factor": 0.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Biofuel_C",
+            "amount": 4,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Biofuel_C"
+}

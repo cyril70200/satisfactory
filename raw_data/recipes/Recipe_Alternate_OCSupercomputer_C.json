@@ -1,0 +1,52 @@
+{
+    "name": "Alternate: OC Supercomputer",
+    "time": 20.0,
+    "ingredients": [
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 2,
+            "rate": 6.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_RadioControlUnit_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlSystem_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlUnit_1_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_CoolingSystem_C",
+            "amount": 2,
+            "rate": 6.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CoolingSystem_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CoolingDevice_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ComputerSuper_C",
+            "amount": 1,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_OCSupercomputer_C"
+}

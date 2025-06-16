@@ -1,0 +1,54 @@
+{
+    "name": "Coal-Powered Generator (Compacted Coal)",
+    "time": 8.4,
+    "ingredients": [
+        {
+            "item": "Desc_CompactedCoal_C",
+            "amount": 1,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_RocketFuel_Nitro_C",
+                    "factor": 0.32
+                },
+                {
+                    "recipe_id": "Recipe_RocketFuel_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IonizedFuel_Dark_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_IonizedFuel_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_EnrichedCoal_C",
+                    "factor": 0.32
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 6.300000000000001,
+            "rate": 50.400000000000006,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 10.5,
+            "rate": 84.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 10.5,
+            "rate": 84.0
+        }
+    ],
+    "machine": "Build_GeneratorCoal_C",
+    "power_use": 0.0
+}

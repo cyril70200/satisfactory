@@ -1,0 +1,60 @@
+{
+    "name": "Packaged Heavy Oil Residue",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_HeavyOilResidue_C",
+            "amount": 2.0,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 3.0
+                },
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PolymerResin_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyOilResidue_C",
+                    "factor": 0.75
+                }
+            ]
+        },
+        {
+            "item": "Desc_FluidCanister_C",
+            "amount": 2,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_SteelCanister_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_FluidCanister_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedIronCanister_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PackagedOilResidue_C",
+            "amount": 2,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0,
+    "recipe_id": "Recipe_PackagedOilResidue_C"
+}

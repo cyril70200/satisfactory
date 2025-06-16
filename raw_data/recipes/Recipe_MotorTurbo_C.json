@@ -1,0 +1,92 @@
+{
+    "name": "Turbo Motor",
+    "time": 32.0,
+    "ingredients": [
+        {
+            "item": "Desc_CoolingSystem_C",
+            "amount": 4,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CoolingSystem_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CoolingDevice_C",
+                    "factor": 1.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 2,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_RadioControlUnit_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlSystem_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlUnit_1_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Motor_C",
+            "amount": 4,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Motor_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectricMotor_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Motor_1_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 24,
+            "rate": 48.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 2.4
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 2.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.8
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_MotorLightweight_C",
+            "amount": 1,
+            "rate": 2.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_MotorTurbo_C"
+}

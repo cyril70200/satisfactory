@@ -1,0 +1,40 @@
+{
+    "name": "Cable",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_Wire_C",
+            "amount": 2,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_FusedWire_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_2_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_1_C",
+                    "factor": 2.2222222222222223
+                },
+                {
+                    "recipe_id": "Recipe_Wire_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Cable_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Cable_C"
+}

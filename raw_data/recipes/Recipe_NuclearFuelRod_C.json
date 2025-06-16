@@ -1,0 +1,64 @@
+{
+    "name": "Uranium Fuel Rod",
+    "time": 150.0,
+    "ingredients": [
+        {
+            "item": "Desc_UraniumCell_C",
+            "amount": 50,
+            "rate": 50.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_UraniumCell_1_C",
+                    "factor": 2.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_SteelPlateReinforced_C",
+            "amount": 3,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_EncasedIndustrialBeam_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_EncasedIndustrialBeam_C",
+                    "factor": 0.75
+                }
+            ]
+        },
+        {
+            "item": "Desc_ElectromagneticControlRod_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_ElectromagneticControlRod_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectromagneticControlRod_1_C",
+                    "factor": 0.625
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_NuclearFuelRod_C",
+            "amount": 1,
+            "rate": 1.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_NuclearFuelRod_C"
+}

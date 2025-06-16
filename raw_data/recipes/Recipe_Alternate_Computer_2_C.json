@@ -1,0 +1,56 @@
+{
+    "name": "Alternate: Crystal Computer",
+    "time": 36.0,
+    "ingredients": [
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 3,
+            "rate": 6.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CircuitBoard_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectrodeCircuitBoard_C",
+                    "factor": 1.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_2_C",
+                    "factor": 0.42857142857142855
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_1_C",
+                    "factor": 0.4
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Computer_C",
+            "amount": 2,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_Computer_2_C"
+}

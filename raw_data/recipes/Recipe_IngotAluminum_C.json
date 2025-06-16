@@ -1,0 +1,60 @@
+{
+    "name": "Aluminum Ingot",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumScrap_C",
+            "amount": 6,
+            "rate": 90.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumScrap_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectroAluminumScrap_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_InstantScrap_C",
+                    "factor": 0.3
+                }
+            ]
+        },
+        {
+            "item": "Desc_Silica_C",
+            "amount": 5,
+            "rate": 75.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminaSolution_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Silica_C",
+                    "factor": 1.875
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_Distilled_C",
+                    "factor": 0.2777777777777778
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_C",
+                    "factor": 1.3392857142857142
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AluminumIngot_C",
+            "amount": 4,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_FoundryMk1_C",
+    "power_use": 16.0,
+    "recipe_id": "Recipe_IngotAluminum_C"
+}

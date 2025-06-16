@@ -1,0 +1,36 @@
+{
+    "name": "Fuel-Powered Generator (Ionized Fuel)",
+    "time": 20.0,
+    "ingredients": [
+        {
+            "item": "Desc_IonizedFuel_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_IonizedFuel_Dark_C",
+                    "factor": 0.015
+                },
+                {
+                    "recipe_id": "Recipe_IonizedFuel_C",
+                    "factor": 0.0625
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Fuel",
+            "amount": 83.33333333333333,
+            "rate": 250.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 83.33333333333333,
+            "rate": 250.0
+        }
+    ],
+    "machine": "Build_GeneratorFuel_C",
+    "power_use": 0.0
+}

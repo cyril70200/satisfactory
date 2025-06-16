@@ -1,0 +1,52 @@
+{
+    "name": "Alternate: Plastic AI Limiter",
+    "time": 15.0,
+    "ingredients": [
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 30,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 7,
+            "rate": 28.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 1.4
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 1.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.4666666666666667
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CircuitBoardHighSpeed_C",
+            "amount": 2,
+            "rate": 8.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_AILimiter_Plastic_C"
+}

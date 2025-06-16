@@ -1,0 +1,48 @@
+{
+    "name": "Nitric Acid",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_NitrogenGas_C",
+            "amount": 12.0,
+            "rate": 120.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 3.0,
+            "rate": 30.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_IronPlate_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IronPlate_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedIronPlate_C",
+                    "factor": 0.125
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelCastedPlate_C",
+                    "factor": 0.2222222222222222
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_NitricAcid_C",
+            "amount": 3.0,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_NitricAcid_C"
+}

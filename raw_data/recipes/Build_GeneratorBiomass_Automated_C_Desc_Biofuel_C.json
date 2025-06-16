@@ -1,0 +1,32 @@
+{
+    "name": "Biomass Burner (Solid Biofuel)",
+    "time": 15.0,
+    "ingredients": [
+        {
+            "item": "Desc_Biofuel_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Biofuel_C",
+                    "factor": 0.06666666666666667
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 7.5,
+            "rate": 30.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 7.5,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_GeneratorBiomass_Automated_C",
+    "power_use": 0.0
+}

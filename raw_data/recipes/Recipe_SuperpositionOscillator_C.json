@@ -1,0 +1,81 @@
+{
+    "name": "Superposition Oscillator",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_DarkMatter_C",
+            "amount": 6,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_DarkMatter_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DarkMatter_Trap_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DarkMatter_Crystallization_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 2.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumPlate_C",
+            "amount": 9,
+            "rate": 45.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumSheet_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumEnergy_C",
+            "amount": 25.0,
+            "rate": 125.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_QuantumEnergy_C",
+                    "factor": 0.625
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_QuantumOscillator_C",
+            "amount": 1,
+            "rate": 5.0
+        },
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 25.0,
+            "rate": 125.0
+        }
+    ],
+    "machine": "Build_QuantumEncoder_C",
+    "power_use": 1000.0,
+    "recipe_id": "Recipe_SuperpositionOscillator_C"
+}

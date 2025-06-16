@@ -1,0 +1,63 @@
+{
+    "name": "Turbo Rifle Ammo",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_CartridgeStandard_C",
+            "amount": 25,
+            "rate": 125.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Cartridge_C",
+                    "factor": 1.6666666666666667
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 3,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 0.125
+                }
+            ]
+        },
+        {
+            "item": "Desc_LiquidTurboFuel_C",
+            "amount": 3.0,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Turbofuel_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_TurboHeavyFuel_C",
+                    "factor": 0.46875
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_TurboBlendFuel_C",
+                    "factor": 0.3125
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CartridgeChaos_C",
+            "amount": 50,
+            "rate": 250.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0
+}

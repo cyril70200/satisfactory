@@ -1,0 +1,28 @@
+{
+    "name": "Alternate: Cheap Silica",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_RawQuartz_C",
+            "amount": 3,
+            "rate": 24.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Stone_C",
+            "amount": 5,
+            "rate": 40.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Silica_C",
+            "amount": 7,
+            "rate": 56.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_Silica_C"
+}

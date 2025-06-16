@@ -1,0 +1,22 @@
+{
+    "name": "Iron Ingot",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreIron_C",
+            "amount": 1,
+            "rate": 30.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronIngot_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_SmelterMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_IngotIron_C"
+}

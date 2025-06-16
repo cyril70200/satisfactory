@@ -1,0 +1,32 @@
+{
+    "name": "Unpackage Water",
+    "time": 1.0,
+    "ingredients": [
+        {
+            "item": "Desc_PackagedWater_C",
+            "amount": 2,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PackagedWater_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Water_C",
+            "amount": 2.0,
+            "rate": 120.0
+        },
+        {
+            "item": "Desc_FluidCanister_C",
+            "amount": 2,
+            "rate": 120.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0
+}

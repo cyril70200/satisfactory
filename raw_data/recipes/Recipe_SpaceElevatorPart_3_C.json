@@ -1,0 +1,56 @@
+{
+    "name": "Automated Wiring",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_Stator_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Stator_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Stator_C",
+                    "factor": 0.375
+                }
+            ]
+        },
+        {
+            "item": "Desc_Cable_C",
+            "amount": 20,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedCable_C",
+                    "factor": 0.8333333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Cable_2_C",
+                    "factor": 1.8181818181818181
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Cable_1_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_Cable_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_3_C",
+            "amount": 1,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_SpaceElevatorPart_3_C"
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Coal-Powered Generator (Coal)",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_Coal_C",
+            "amount": 1,
+            "rate": 15.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 3.0,
+            "rate": 45.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 5.0,
+            "rate": 75.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 5.0,
+            "rate": 75.0
+        }
+    ],
+    "machine": "Build_GeneratorCoal_C",
+    "power_use": 0.0
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Recipe</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .byproduct-pill {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 0.2rem 0.6rem;
+            margin-left: 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container my-4">
+    <h2 class="mb-4">Select Recipe for <span class="text-primary">{{ item_name or get_item_name(item, recipes) }}</span>{% if rate %} <span class="text-secondary">({{ rate }}/min)</span>{% endif %}</h2>
+    <form method="post">
+        <div class="row g-3">
+        {% for recipe_id, recipe, prod in candidate_recipes %}
+        {% set machines = (rate / prod['rate']) if rate and prod['rate'] else 1 %}
+        <div class="col-12">
+            <label for="{{ recipe_id }}" class="card recipe-card shadow-sm mb-2 recipe-select-label {% if recipe_id == '__outsourced__' %}border-secondary{% endif %}">
+                <div class="card-header d-flex align-items-center {% if recipe_id == '__outsourced__' %}bg-secondary text-light opacity-75{% endif %}">
+                    <input type="radio" name="recipe_id" value="{{ recipe_id }}" id="{{ recipe_id }}" class="form-check-input me-3 recipe-radio" required>
+                    <div class="flex-grow-1 d-flex align-items-center">
+                        <span class="h5 mb-0">{{ get_recipe_name(recipe_id, recipes) if recipe_id != '__outsourced__' else 'Outsourced' }}</span>
+                        {% if recipe_id != '__outsourced__' %}
+                        {% set main_product = prod['item'] %}
+                        {% set byproducts = [] %}
+                        {% for p in recipe.get('products', []) %}
+                            {% if p['item'] != item %}
+                                {% set _ = byproducts.append(p) %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if byproducts %}
+                            <span class="ms-2">
+                                {% for bp in byproducts %}
+                                    <span class="byproduct-pill">{{ get_item_name(bp['item'], recipes) }}: {{ (bp['rate'] * machines)|round(2) }}/min</span>
+                                {% endfor %}
+                            </span>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+                {% if recipe_id != '__outsourced__' %}
+                <div class="card-body py-2">
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <strong>Machine:</strong> {{ get_machine_name(recipe.get('machine')) }}<br>
+                            <strong>Machines Needed:</strong> {{ machines|round(2) }}<br>
+                            <strong>Total Power:</strong> {{ (recipe.get('power_use', 0) * machines)|round(2) }} MW
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <strong>Products:</strong>
+                            <ul class="mb-1">
+                                {% for p in recipe.get('products', []) %}
+                                <li>{{ get_item_name(p['item'], recipes) }}: {{ (p['rate'] * machines)|round(2) }}/min</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <strong>Ingredients:</strong>
+                            <ul class="mb-1">
+                                {% for ing in recipe.get('ingredients', []) %}
+                                <li>{{ get_item_name(ing['item'], recipes) }}: {{ (ing['rate'] * machines)|round(2) }}/min {% if ing.get('resource', False) %}<span class="badge bg-success">Resource</span>{% endif %}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="card-body py-2 text-center">
+                    <span class="text-secondary">Treat this item as externally supplied (no recipe, no production tree).</span>
+                </div>
+                {% endif %}
+            </label>
+        </div>
+        {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Select Recipe</button>
+        <a href="/" class="btn btn-secondary mt-3 ms-2">Back to Project</a>
+    </form>
+    </div>
+</body>
+</html>

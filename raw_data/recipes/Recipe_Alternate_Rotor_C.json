@@ -1,0 +1,60 @@
+{
+    "name": "Alternate: Steel Rotor",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_SteelPipe_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SteelPipe_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Molded_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Iron_C",
+                    "factor": 0.4
+                }
+            ]
+        },
+        {
+            "item": "Desc_Wire_C",
+            "amount": 6,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_FusedWire_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_2_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_1_C",
+                    "factor": 1.1111111111111112
+                },
+                {
+                    "recipe_id": "Recipe_Wire_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_Rotor_C"
+}

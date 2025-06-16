@@ -1,0 +1,22 @@
+{
+    "name": "Spitter Protein",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpitterParts_C",
+            "amount": 1,
+            "rate": 20.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AlienProtein_C",
+            "amount": 1,
+            "rate": 20.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Protein_Spitter_C"
+}

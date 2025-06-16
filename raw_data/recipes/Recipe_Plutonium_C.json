@@ -1,0 +1,44 @@
+{
+    "name": "Plutonium Pellet",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_NonFissibleUranium_C",
+            "amount": 100,
+            "rate": 100.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_NonFissileUranium_C",
+                    "factor": 1.6666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_FertileUranium_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_NuclearWaste_C",
+            "amount": 25,
+            "rate": 25.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Build_GeneratorNuclear_C_Desc_NuclearFuelRod_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PlutoniumPellet_C",
+            "amount": 30,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 500.0,
+    "recipe_id": "Recipe_Plutonium_C"
+}

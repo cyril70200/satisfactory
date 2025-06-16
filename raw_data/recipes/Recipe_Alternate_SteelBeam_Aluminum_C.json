@@ -1,0 +1,32 @@
+{
+    "name": "Alternate: Aluminum Beam",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumIngot_C",
+            "amount": 3,
+            "rate": 24.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PureAluminumIngot_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_IngotAluminum_C",
+                    "factor": 0.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SteelPlate_C",
+            "amount": 3,
+            "rate": 24.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Alternate_SteelBeam_Aluminum_C"
+}

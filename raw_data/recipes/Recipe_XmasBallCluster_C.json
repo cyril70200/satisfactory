@@ -1,0 +1,40 @@
+{
+    "name": "FICSMAS Ornament Bundle",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_XmasBall3_C",
+            "amount": 1,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_XmasBall3_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_XmasBall4_C",
+            "amount": 1,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_XmasBall4_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_XmasBallCluster_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_XmasBallCluster_C"
+}

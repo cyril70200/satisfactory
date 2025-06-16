@@ -1,0 +1,42 @@
+{
+    "name": "Packaged Oil",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_LiquidOil_C",
+            "amount": 2.0,
+            "rate": 30.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_FluidCanister_C",
+            "amount": 2,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_SteelCanister_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_FluidCanister_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedIronCanister_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PackagedOil_C",
+            "amount": 2,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0,
+    "recipe_id": "Recipe_PackagedCrudeOil_C"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "Motor",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CopperRotor_C",
+                    "factor": 0.8333333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Rotor_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Rotor_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Stator_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Stator_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Stator_C",
+                    "factor": 1.25
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Motor_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Motor_C"
+}

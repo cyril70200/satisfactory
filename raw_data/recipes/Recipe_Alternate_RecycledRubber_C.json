@@ -1,0 +1,56 @@
+{
+    "name": "Alternate: Recycled Rubber",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 6,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_LiquidFuel_C",
+            "amount": 6.0,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_LiquidFuel_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_ResidualFuel_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+                    "factor": 0.3
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 12,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_RecycledRubber_C"
+}

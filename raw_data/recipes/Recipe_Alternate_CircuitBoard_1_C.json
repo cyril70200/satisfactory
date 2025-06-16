@@ -1,0 +1,56 @@
+{
+    "name": "Alternate: Silicon Circuit Board",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_CopperSheet_C",
+            "amount": 11,
+            "rate": 33.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+                    "factor": 1.375
+                },
+                {
+                    "recipe_id": "Recipe_CopperSheet_C",
+                    "factor": 3.3
+                }
+            ]
+        },
+        {
+            "item": "Desc_Silica_C",
+            "amount": 11,
+            "rate": 33.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminaSolution_C",
+                    "factor": 0.66
+                },
+                {
+                    "recipe_id": "Recipe_Silica_C",
+                    "factor": 0.825
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_Distilled_C",
+                    "factor": 0.12222222222222222
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_C",
+                    "factor": 0.5892857142857143
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 5,
+            "rate": 15.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_CircuitBoard_1_C"
+}

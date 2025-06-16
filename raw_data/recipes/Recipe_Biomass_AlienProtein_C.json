@@ -1,0 +1,40 @@
+{
+    "name": "Biomass (Alien Protein)",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_AlienProtein_C",
+            "amount": 1,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Protein_Hog_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Protein_Spitter_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Protein_Stinger_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Protein_Crab_C",
+                    "factor": 0.75
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_GenericBiomass_C",
+            "amount": 100,
+            "rate": 1500.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Biomass_AlienProtein_C"
+}

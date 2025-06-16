@@ -1,0 +1,38 @@
+{
+    "name": "Alternate: Leached Caterium Ingot",
+    "time": 10.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreGold_C",
+            "amount": 9,
+            "rate": 54.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 5.0,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 3.0
+                },
+                {
+                    "recipe_id": "Recipe_SulfuricAcid_C",
+                    "factor": 0.6
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_GoldIngot_C",
+            "amount": 6,
+            "rate": 36.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_CateriumIngot_Leached_C"
+}

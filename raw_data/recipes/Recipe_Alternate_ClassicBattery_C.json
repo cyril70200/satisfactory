@@ -1,0 +1,78 @@
+{
+    "name": "Alternate: Classic Battery",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_Sulfur_C",
+            "amount": 6,
+            "rate": 48.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_AluminumPlate_C",
+            "amount": 7,
+            "rate": 56.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumSheet_C",
+                    "factor": 1.8666666666666667
+                }
+            ]
+        },
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 8,
+            "rate": 64.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 3.2
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 3.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 1.0666666666666667
+                }
+            ]
+        },
+        {
+            "item": "Desc_Wire_C",
+            "amount": 12,
+            "rate": 96.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_FusedWire_C",
+                    "factor": 1.0666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_2_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_1_C",
+                    "factor": 3.5555555555555554
+                },
+                {
+                    "recipe_id": "Recipe_Wire_C",
+                    "factor": 3.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Battery_C",
+            "amount": 4,
+            "rate": 32.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_ClassicBattery_C"
+}

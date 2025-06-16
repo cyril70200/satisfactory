@@ -1,0 +1,72 @@
+{
+    "name": "Modular Engine",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_Motor_C",
+            "amount": 2,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Motor_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectricMotor_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Motor_1_C",
+                    "factor": 0.16666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 15,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.25
+                }
+            ]
+        },
+        {
+            "item": "Desc_SpaceElevatorPart_1_C",
+            "amount": 2,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PlasticSmartPlating_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_1_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_4_C",
+            "amount": 1,
+            "rate": 1.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_SpaceElevatorPart_4_C"
+}

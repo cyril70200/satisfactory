@@ -1,0 +1,36 @@
+{
+    "name": "Empty Canister",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 2,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_FluidCanister_C",
+            "amount": 4,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_FluidCanister_C"
+}

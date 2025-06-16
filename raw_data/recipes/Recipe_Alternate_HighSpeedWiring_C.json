@@ -1,0 +1,72 @@
+{
+    "name": "Alternate: Automated Speed Wiring",
+    "time": 32.0,
+    "ingredients": [
+        {
+            "item": "Desc_Stator_C",
+            "amount": 2,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Stator_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Stator_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_Wire_C",
+            "amount": 40,
+            "rate": 80.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_FusedWire_C",
+                    "factor": 0.8888888888888888
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_2_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Wire_1_C",
+                    "factor": 2.962962962962963
+                },
+                {
+                    "recipe_id": "Recipe_Wire_C",
+                    "factor": 2.6666666666666665
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedConnector_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_HighSpeedConnector_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HighSpeedConnector_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_3_C",
+            "amount": 4,
+            "rate": 8.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_HighSpeedWiring_C"
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Biochemical Sculptor",
+    "time": 120.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpaceElevatorPart_7_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_7_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_FicsiteMesh_C",
+            "amount": 80,
+            "rate": 80.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_FicsiteMesh_C",
+                    "factor": 2.6666666666666665
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 20.0,
+            "rate": 20.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_10_C",
+            "amount": 4,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 1000.0
+}

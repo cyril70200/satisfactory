@@ -1,0 +1,42 @@
+{
+    "name": "Alternate: Polyester Fabric",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_PolymerResin_C",
+            "amount": 1,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_LiquidFuel_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PolymerResin_C",
+                    "factor": 0.23076923076923078
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyOilResidue_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 1.0,
+            "rate": 30.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Fabric_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_PolyesterFabric_C"
+}

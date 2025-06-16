@@ -1,0 +1,52 @@
+{
+    "name": "Alternate: Copper Rotor",
+    "time": 16.0,
+    "ingredients": [
+        {
+            "item": "Desc_CopperSheet_C",
+            "amount": 6,
+            "rate": 24.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_CopperSheet_C",
+                    "factor": 2.4
+                }
+            ]
+        },
+        {
+            "item": "Desc_IronScrew_C",
+            "amount": 52,
+            "rate": 208.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Screw_2_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Screw_C",
+                    "factor": 3.466666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Screw_C",
+                    "factor": 5.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 3,
+            "rate": 12.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_CopperRotor_C"
+}

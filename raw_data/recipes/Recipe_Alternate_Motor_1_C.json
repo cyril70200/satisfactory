@@ -1,0 +1,68 @@
+{
+    "name": "Alternate: Rigor Motor",
+    "time": 48.0,
+    "ingredients": [
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 3,
+            "rate": 6.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CopperRotor_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Rotor_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Rotor_C",
+                    "factor": 1.2
+                }
+            ]
+        },
+        {
+            "item": "Desc_Stator_C",
+            "amount": 3,
+            "rate": 6.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Stator_C",
+                    "factor": 1.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Stator_C",
+                    "factor": 0.75
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Motor_C",
+            "amount": 6,
+            "rate": 12.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_Motor_1_C"
+}

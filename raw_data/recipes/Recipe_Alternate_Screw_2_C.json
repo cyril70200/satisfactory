@@ -1,0 +1,36 @@
+{
+    "name": "Alternate: Steel Screw",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_SteelPlate_C",
+            "amount": 1,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SteelBeam_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelBeam_Molded_C",
+                    "factor": 0.1111111111111111
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelBeam_Aluminum_C",
+                    "factor": 0.20833333333333334
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronScrew_C",
+            "amount": 52,
+            "rate": 260.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Alternate_Screw_2_C"
+}

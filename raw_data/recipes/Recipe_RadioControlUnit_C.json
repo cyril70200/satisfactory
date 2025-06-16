@@ -1,0 +1,68 @@
+{
+    "name": "Radio Control Unit",
+    "time": 48.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 32,
+            "rate": 64.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 1.0666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 0.5333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Computer_C",
+            "amount": 2,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Computer_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Computer_2_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Computer_1_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 2,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_RadioControlUnit_C"
+}

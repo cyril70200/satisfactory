@@ -1,0 +1,22 @@
+{
+    "name": "Silica",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_RawQuartz_C",
+            "amount": 3,
+            "rate": 24.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Silica_C",
+            "amount": 5,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Silica_C"
+}

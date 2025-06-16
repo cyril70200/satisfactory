@@ -1,0 +1,32 @@
+{
+    "name": "Unpackage Ionized Fuel",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_PackagedIonizedFuel_C",
+            "amount": 2,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PackagedIonizedFuel_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IonizedFuel_C",
+            "amount": 4.0,
+            "rate": 80.0
+        },
+        {
+            "item": "Desc_GasTank_C",
+            "amount": 2,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0
+}

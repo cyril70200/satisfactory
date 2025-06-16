@@ -1,0 +1,76 @@
+{
+    "name": "Alternate: Insulated Crystal Oscillator",
+    "time": 32.0,
+    "ingredients": [
+        {
+            "item": "Desc_QuartzCrystal_C",
+            "amount": 10,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureQuartzCrystal_C",
+                    "factor": 0.35714285714285715
+                },
+                {
+                    "recipe_id": "Recipe_QuartzCrystal_C",
+                    "factor": 0.8333333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Purified_C",
+                    "factor": 0.26666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Fused_C",
+                    "factor": 0.37037037037037035
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 7,
+            "rate": 14.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 0.7
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 0.7
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.23333333333333334
+                }
+            ]
+        },
+        {
+            "item": "Desc_CircuitBoardHighSpeed_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AILimiter_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AILimiter_Plastic_C",
+                    "factor": 0.25
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 2.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_CrystalOscillator_C"
+}

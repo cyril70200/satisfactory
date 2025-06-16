@@ -1,0 +1,22 @@
+{
+    "name": "Red FICSMAS Ornament",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_Gift_C",
+            "amount": 1,
+            "rate": 5.0,
+            "resource": false
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_XmasBall1_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_SmelterMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_XmasBall1_C"
+}

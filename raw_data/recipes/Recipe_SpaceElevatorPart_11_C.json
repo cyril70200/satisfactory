@@ -1,0 +1,71 @@
+{
+    "name": "Ballistic Warp Drive",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpaceElevatorPart_8_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_8_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_SingularityCell_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SingularityCell_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumOscillator_C",
+            "amount": 2,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SuperpositionOscillator_C",
+                    "factor": 0.4
+                }
+            ]
+        },
+        {
+            "item": "Desc_DarkMatter_C",
+            "amount": 40,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_DarkMatter_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DarkMatter_Trap_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DarkMatter_Crystallization_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_11_C",
+            "amount": 1,
+            "rate": 1.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 1000.0
+}

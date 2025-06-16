@@ -1,0 +1,38 @@
+{
+    "name": "Nuclear Power Plant (Ficsonium Fuel Rod)",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_FicsoniumFuelRod_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_FicsoniumFuelRod_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 240.0,
+            "rate": 240.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Nuclear",
+            "amount": 2500.0,
+            "rate": 2500.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 2500.0,
+            "rate": 2500.0
+        }
+    ],
+    "machine": "Build_GeneratorNuclear_C",
+    "power_use": 0.0
+}

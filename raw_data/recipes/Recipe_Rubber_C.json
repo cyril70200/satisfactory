@@ -1,0 +1,27 @@
+{
+    "name": "Rubber",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_LiquidOil_C",
+            "amount": 3.0,
+            "rate": 30.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 2,
+            "rate": 20.0
+        },
+        {
+            "item": "Desc_HeavyOilResidue_C",
+            "amount": 2.0,
+            "rate": 20.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Rubber_C"
+}

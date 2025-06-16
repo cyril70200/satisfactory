@@ -1,0 +1,28 @@
+{
+    "name": "Alternate: Iron Alloy Ingot",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreIron_C",
+            "amount": 8,
+            "rate": 40.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_OreCopper_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronIngot_C",
+            "amount": 15,
+            "rate": 75.0
+        }
+    ],
+    "machine": "Build_FoundryMk1_C",
+    "power_use": 16.0,
+    "recipe_id": "Recipe_Alternate_IngotIron_C"
+}

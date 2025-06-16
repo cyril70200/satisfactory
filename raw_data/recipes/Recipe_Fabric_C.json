@@ -1,0 +1,46 @@
+{
+    "name": "Fabric",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_Mycelia_C",
+            "amount": 1,
+            "rate": 15.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_GenericBiomass_C",
+            "amount": 5,
+            "rate": 75.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Biomass_Mycelia_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_AlienProtein_C",
+                    "factor": 0.05
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_Leaves_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_Wood_C",
+                    "factor": 0.25
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Fabric_C",
+            "amount": 1,
+            "rate": 15.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Fabric_C"
+}

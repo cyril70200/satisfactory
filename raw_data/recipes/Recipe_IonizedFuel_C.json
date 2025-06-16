@@ -1,0 +1,49 @@
+{
+    "name": "Ionized Fuel",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_RocketFuel_C",
+            "amount": 16.0,
+            "rate": 48.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_RocketFuel_Nitro_C",
+                    "factor": 0.32
+                },
+                {
+                    "recipe_id": "Recipe_RocketFuel_C",
+                    "factor": 0.48
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalShard_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SyntheticPowerShard_C",
+                    "factor": 0.6
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IonizedFuel_C",
+            "amount": 16.0,
+            "rate": 48.0
+        },
+        {
+            "item": "Desc_CompactedCoal_C",
+            "amount": 2,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_IonizedFuel_C"
+}

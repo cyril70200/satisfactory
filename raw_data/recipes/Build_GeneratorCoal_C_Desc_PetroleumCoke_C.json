@@ -1,0 +1,38 @@
+{
+    "name": "Coal-Powered Generator (Petroleum Coke)",
+    "time": 2.4,
+    "ingredients": [
+        {
+            "item": "Desc_PetroleumCoke_C",
+            "amount": 1,
+            "rate": 25.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PetroleumCoke_C",
+                    "factor": 0.20833333333333334
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 1.7999999999999998,
+            "rate": 44.99999999999999,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 3.0,
+            "rate": 75.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 3.0,
+            "rate": 75.0
+        }
+    ],
+    "machine": "Build_GeneratorCoal_C",
+    "power_use": 0.0
+}

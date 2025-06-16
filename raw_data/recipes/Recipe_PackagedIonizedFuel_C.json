@@ -1,0 +1,44 @@
+{
+    "name": "Packaged Ionized Fuel",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_IonizedFuel_C",
+            "amount": 4.0,
+            "rate": 80.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_IonizedFuel_Dark_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_IonizedFuel_C",
+                    "factor": 1.6666666666666667
+                }
+            ]
+        },
+        {
+            "item": "Desc_GasTank_C",
+            "amount": 2,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_GasTank_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PackagedIonizedFuel_C",
+            "amount": 2,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0,
+    "recipe_id": "Recipe_PackagedIonizedFuel_C"
+}

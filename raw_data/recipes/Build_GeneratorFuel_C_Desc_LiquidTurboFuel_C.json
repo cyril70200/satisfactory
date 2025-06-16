@@ -1,0 +1,40 @@
+{
+    "name": "Fuel-Powered Generator (Turbofuel)",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_LiquidTurboFuel_C",
+            "amount": 1,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Turbofuel_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_TurboHeavyFuel_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_TurboBlendFuel_C",
+                    "factor": 0.16666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Fuel",
+            "amount": 33.333333333333336,
+            "rate": 266.6666666666667
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 33.333333333333336,
+            "rate": 266.6666666666667
+        }
+    ],
+    "machine": "Build_GeneratorFuel_C",
+    "power_use": 0.0
+}

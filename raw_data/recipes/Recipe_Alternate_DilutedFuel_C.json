@@ -1,0 +1,46 @@
+{
+    "name": "Alternate: Diluted Fuel",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_HeavyOilResidue_C",
+            "amount": 5.0,
+            "rate": 50.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 5.0
+                },
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PolymerResin_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyOilResidue_C",
+                    "factor": 1.25
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 10.0,
+            "rate": 100.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_LiquidFuel_C",
+            "amount": 10.0,
+            "rate": 100.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_Alternate_DilutedFuel_C"
+}

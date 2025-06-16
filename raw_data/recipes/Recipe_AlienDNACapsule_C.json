@@ -1,0 +1,39 @@
+{
+    "name": "Alien DNA Capsule",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_AlienProtein_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Protein_Hog_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Protein_Spitter_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Protein_Stinger_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Protein_Crab_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AlienDNACapsule_C",
+            "amount": 1,
+            "rate": 10.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0
+}

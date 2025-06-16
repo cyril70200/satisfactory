@@ -1,0 +1,21 @@
+{
+    "name": "Alternate: Charcoal",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_Wood_C",
+            "amount": 1,
+            "rate": 15.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Coal_C",
+            "amount": 10,
+            "rate": 150.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0
+}

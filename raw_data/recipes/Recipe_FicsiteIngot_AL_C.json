@@ -1,0 +1,44 @@
+{
+    "name": "Ficsite Ingot (Aluminum)",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_SAMIngot_C",
+            "amount": 2,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotSAM_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumIngot_C",
+            "amount": 4,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PureAluminumIngot_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_IngotAluminum_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_FicsiteIngot_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_Converter_C",
+    "power_use": 250.0,
+    "recipe_id": "Recipe_FicsiteIngot_AL_C"
+}

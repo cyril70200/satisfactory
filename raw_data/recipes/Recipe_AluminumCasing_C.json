@@ -1,0 +1,32 @@
+{
+    "name": "Aluminum Casing",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumIngot_C",
+            "amount": 3,
+            "rate": 90.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PureAluminumIngot_C",
+                    "factor": 3.0
+                },
+                {
+                    "recipe_id": "Recipe_IngotAluminum_C",
+                    "factor": 1.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 2,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_AluminumCasing_C"
+}

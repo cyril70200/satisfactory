@@ -1,0 +1,22 @@
+{
+    "name": "Alternate: Oil-Based Diamonds",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_LiquidOil_C",
+            "amount": 10.0,
+            "rate": 200.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Diamond_C",
+            "amount": 2,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 500.0,
+    "recipe_id": "Recipe_Alternate_Diamond_OilBased_C"
+}

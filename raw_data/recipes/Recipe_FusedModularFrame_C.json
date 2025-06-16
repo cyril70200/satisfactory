@@ -1,0 +1,58 @@
+{
+    "name": "Fused Modular Frame",
+    "time": 40.0,
+    "ingredients": [
+        {
+            "item": "Desc_ModularFrameHeavy_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyFlexibleFrame_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_ModularFrameHeavy_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ModularFrameHeavy_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 50,
+            "rate": 100.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 1.6666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 0.8333333333333334
+                }
+            ]
+        },
+        {
+            "item": "Desc_NitrogenGas_C",
+            "amount": 25.0,
+            "rate": 50.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameFused_C",
+            "amount": 1,
+            "rate": 2.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_FusedModularFrame_C"
+}

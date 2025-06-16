@@ -1,0 +1,52 @@
+{
+    "name": "Packaged Sulfuric Acid",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 2.0,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_SulfuricAcid_C",
+                    "factor": 0.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_FluidCanister_C",
+            "amount": 2,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_SteelCanister_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_FluidCanister_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedIronCanister_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PackagedSulfuricAcid_C",
+            "amount": 2,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0,
+    "recipe_id": "Recipe_PackagedSulfuricAcid_C"
+}

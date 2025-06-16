@@ -1,0 +1,39 @@
+{
+    "name": "Sweet Fireworks",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_XmasBranch_C",
+            "amount": 6,
+            "rate": 18.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_XmasBranch_C",
+                    "factor": 1.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_CandyCane_C",
+            "amount": 3,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CandyCane_C",
+                    "factor": 1.8
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Fireworks_Projectile_01_C",
+            "amount": 1,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0
+}

@@ -1,0 +1,76 @@
+{
+    "name": "Alternate: Turbo Pressure Motor",
+    "time": 32.0,
+    "ingredients": [
+        {
+            "item": "Desc_Motor_C",
+            "amount": 4,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Motor_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectricMotor_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Motor_1_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_PressureConversionCube_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PressureConversionCube_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_PackagedNitrogenGas_C",
+            "amount": 24,
+            "rate": 48.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PackagedNitrogen_C",
+                    "factor": 0.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_Stator_C",
+            "amount": 8,
+            "rate": 16.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Stator_C",
+                    "factor": 3.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Stator_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_MotorLightweight_C",
+            "amount": 2,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_TurboPressureMotor_C"
+}

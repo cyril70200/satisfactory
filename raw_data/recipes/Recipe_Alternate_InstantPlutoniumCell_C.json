@@ -1,0 +1,48 @@
+{
+    "name": "Alternate: Instant Plutonium Cell",
+    "time": 120.0,
+    "ingredients": [
+        {
+            "item": "Desc_NonFissibleUranium_C",
+            "amount": 150,
+            "rate": 150.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_NonFissileUranium_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_FertileUranium_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 20,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 0.16666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PlutoniumCell_C",
+            "amount": 20,
+            "rate": 20.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 500.0,
+    "recipe_id": "Recipe_Alternate_InstantPlutoniumCell_C"
+}

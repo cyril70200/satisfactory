@@ -1,0 +1,80 @@
+{
+    "name": "Alternate: Plastic Smart Plating",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronPlateReinforced_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_AdheredIronPlate_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_2_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_1_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_IronPlateReinforced_C",
+                    "factor": 0.6
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CopperRotor_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Rotor_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Rotor_C",
+                    "factor": 0.6
+                }
+            ]
+        },
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 3,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 0.45
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 0.45
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.15
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_1_C",
+            "amount": 2,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_PlasticSmartPlating_C"
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Alternate: Dark-Ion Fuel",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_PackagedRocketFuel_C",
+            "amount": 12,
+            "rate": 240.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PackagedRocketFuel_C",
+                    "factor": 4.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_DarkMatter_C",
+            "amount": 4,
+            "rate": 80.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_DarkMatter_C",
+                    "factor": 2.6666666666666665
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DarkMatter_Trap_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DarkMatter_Crystallization_C",
+                    "factor": 4.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IonizedFuel_C",
+            "amount": 10.0,
+            "rate": 200.0
+        },
+        {
+            "item": "Desc_CompactedCoal_C",
+            "amount": 2,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_Converter_C",
+    "power_use": 250.0,
+    "recipe_id": "Recipe_Alternate_IonizedFuel_Dark_C"
+}

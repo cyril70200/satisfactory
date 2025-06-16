@@ -1,0 +1,48 @@
+{
+    "name": "Nuclear Power Plant (Plutonium Fuel Rod)",
+    "time": 600.0,
+    "ingredients": [
+        {
+            "item": "Desc_PlutoniumFuelRod_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PlutoniumFuelRod_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PlutoniumFuelUnit_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 2400.0,
+            "rate": 2400.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Nuclear",
+            "amount": 25000.0,
+            "rate": 25000.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 25000.0,
+            "rate": 25000.0
+        },
+        {
+            "item": "Desc_PlutoniumWaste_C",
+            "amount": 10.0,
+            "rate": 10.0
+        }
+    ],
+    "machine": "Build_GeneratorNuclear_C",
+    "power_use": 0.0,
+    "recipe_id": "Build_GeneratorNuclear_C_Desc_PlutoniumFuelRod_C"
+}

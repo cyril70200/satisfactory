@@ -1,0 +1,52 @@
+{
+    "name": "Pressure Conversion Cube",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_ModularFrameFused_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_FusedModularFrame_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeatFusedFrame_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 2,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_RadioControlUnit_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlSystem_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlUnit_1_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PressureConversionCube_C",
+            "amount": 1,
+            "rate": 1.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_PressureConversionCube_C"
+}

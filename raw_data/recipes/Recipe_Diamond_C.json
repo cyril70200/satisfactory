@@ -1,0 +1,22 @@
+{
+    "name": "Diamonds",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_Coal_C",
+            "amount": 20,
+            "rate": 600.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Diamond_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 500.0,
+    "recipe_id": "Recipe_Diamond_C"
+}

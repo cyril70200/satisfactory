@@ -1,0 +1,43 @@
+{
+    "name": "Homing Rifle Ammo",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_CartridgeStandard_C",
+            "amount": 20,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Cartridge_C",
+                    "factor": 0.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedConnector_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_HighSpeedConnector_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HighSpeedConnector_C",
+                    "factor": 0.75
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CartridgeSmartProjectile_C",
+            "amount": 10,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0
+}

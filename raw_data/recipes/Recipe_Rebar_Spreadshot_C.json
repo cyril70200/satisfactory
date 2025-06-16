@@ -1,0 +1,51 @@
+{
+    "name": "Shatter Rebar",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpikedRebar_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SpikedRebar_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuartzCrystal_C",
+            "amount": 3,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureQuartzCrystal_C",
+                    "factor": 0.26785714285714285
+                },
+                {
+                    "recipe_id": "Recipe_QuartzCrystal_C",
+                    "factor": 0.625
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Purified_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Fused_C",
+                    "factor": 0.2777777777777778
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rebar_Spreadshot_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0
+}

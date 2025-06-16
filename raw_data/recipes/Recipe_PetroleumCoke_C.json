@@ -1,0 +1,40 @@
+{
+    "name": "Petroleum Coke",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_HeavyOilResidue_C",
+            "amount": 4.0,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PolymerResin_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyOilResidue_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PetroleumCoke_C",
+            "amount": 12,
+            "rate": 120.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_PetroleumCoke_C"
+}

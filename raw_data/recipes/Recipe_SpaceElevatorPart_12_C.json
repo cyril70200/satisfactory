@@ -1,0 +1,69 @@
+{
+    "name": "AI Expansion Server",
+    "time": 15.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpaceElevatorPart_6_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_6_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_TemporalProcessor_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_TemporalProcessor_C",
+                    "factor": 1.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumOscillator_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SuperpositionOscillator_C",
+                    "factor": 0.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumEnergy_C",
+            "amount": 25.0,
+            "rate": 100.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_QuantumEnergy_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_12_C",
+            "amount": 1,
+            "rate": 4.0
+        },
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 25.0,
+            "rate": 100.0
+        }
+    ],
+    "machine": "Build_QuantumEncoder_C",
+    "power_use": 1000.0,
+    "recipe_id": "Recipe_SpaceElevatorPart_12_C"
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Screw",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronRod_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IronRod_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelRod_C",
+                    "factor": 0.20833333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AluminumRod_C",
+                    "factor": 0.17857142857142858
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronScrew_C",
+            "amount": 4,
+            "rate": 40.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Screw_C"
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Iron Rebar",
+    "time": 4.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronRod_C",
+            "amount": 1,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IronRod_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelRod_C",
+                    "factor": 0.3125
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AluminumRod_C",
+                    "factor": 0.26785714285714285
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpikedRebar_C",
+            "amount": 1,
+            "rate": 15.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_SpikedRebar_C"
+}

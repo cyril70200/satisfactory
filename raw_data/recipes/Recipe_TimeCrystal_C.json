@@ -1,0 +1,48 @@
+{
+    "name": "Time Crystal",
+    "time": 10.0,
+    "ingredients": [
+        {
+            "item": "Desc_Diamond_C",
+            "amount": 2,
+            "rate": 12.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Turbo_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Diamond_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Pink_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Petroleum_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_OilBased_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Cloudy_C",
+                    "factor": 0.6
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_TimeCrystal_C",
+            "amount": 1,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_Converter_C",
+    "power_use": 250.0,
+    "recipe_id": "Recipe_TimeCrystal_C"
+}

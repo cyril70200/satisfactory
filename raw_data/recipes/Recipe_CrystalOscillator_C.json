@@ -1,0 +1,88 @@
+{
+    "name": "Crystal Oscillator",
+    "time": 120.0,
+    "ingredients": [
+        {
+            "item": "Desc_QuartzCrystal_C",
+            "amount": 36,
+            "rate": 36.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureQuartzCrystal_C",
+                    "factor": 0.6428571428571429
+                },
+                {
+                    "recipe_id": "Recipe_QuartzCrystal_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Purified_C",
+                    "factor": 0.48
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Fused_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_Cable_C",
+            "amount": 28,
+            "rate": 28.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedCable_C",
+                    "factor": 0.3888888888888889
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Cable_2_C",
+                    "factor": 0.8484848484848485
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Cable_1_C",
+                    "factor": 0.28
+                },
+                {
+                    "recipe_id": "Recipe_Cable_C",
+                    "factor": 0.9333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_IronPlateReinforced_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_AdheredIronPlate_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_2_C",
+                    "factor": 0.8333333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_1_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_IronPlateReinforced_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 2,
+            "rate": 2.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_CrystalOscillator_C"
+}

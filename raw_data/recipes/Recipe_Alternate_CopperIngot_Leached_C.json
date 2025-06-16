@@ -1,0 +1,38 @@
+{
+    "name": "Alternate: Leached Copper Ingot",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreCopper_C",
+            "amount": 9,
+            "rate": 45.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 5.0,
+            "rate": 25.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_SulfuricAcid_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CopperIngot_C",
+            "amount": 22,
+            "rate": 110.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_CopperIngot_Leached_C"
+}

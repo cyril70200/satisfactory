@@ -1,0 +1,64 @@
+{
+    "name": "Cooling System",
+    "time": 10.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumPlateReinforced_C",
+            "amount": 2,
+            "rate": 12.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_HeatSink_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeatSink_1_C",
+                    "factor": 1.2
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 2,
+            "rate": 12.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.2
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 5.0,
+            "rate": 30.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_NitrogenGas_C",
+            "amount": 25.0,
+            "rate": 150.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CoolingSystem_C",
+            "amount": 1,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_CoolingSystem_C"
+}

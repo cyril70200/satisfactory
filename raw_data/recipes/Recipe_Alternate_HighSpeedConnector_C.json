@@ -1,0 +1,80 @@
+{
+    "name": "Alternate: Silicon High-Speed Connector",
+    "time": 40.0,
+    "ingredients": [
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 60,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Silica_C",
+            "amount": 25,
+            "rate": 50.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminaSolution_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Silica_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_Distilled_C",
+                    "factor": 0.18518518518518517
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_C",
+                    "factor": 0.8928571428571429
+                }
+            ]
+        },
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 2,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CircuitBoard_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectrodeCircuitBoard_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_2_C",
+                    "factor": 0.2857142857142857
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_1_C",
+                    "factor": 0.26666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_HighSpeedConnector_C",
+            "amount": 2,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_HighSpeedConnector_C"
+}

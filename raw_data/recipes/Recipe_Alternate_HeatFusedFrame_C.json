@@ -1,0 +1,84 @@
+{
+    "name": "Alternate: Heat-Fused Frame",
+    "time": 20.0,
+    "ingredients": [
+        {
+            "item": "Desc_ModularFrameHeavy_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyFlexibleFrame_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_ModularFrameHeavy_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ModularFrameHeavy_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumIngot_C",
+            "amount": 50,
+            "rate": 150.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PureAluminumIngot_C",
+                    "factor": 5.0
+                },
+                {
+                    "recipe_id": "Recipe_IngotAluminum_C",
+                    "factor": 2.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_NitricAcid_C",
+            "amount": 8.0,
+            "rate": 24.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_NitricAcid_C",
+                    "factor": 0.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_LiquidFuel_C",
+            "amount": 10.0,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_LiquidFuel_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_ResidualFuel_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+                    "factor": 0.3
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameFused_C",
+            "amount": 1,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_Alternate_HeatFusedFrame_C"
+}

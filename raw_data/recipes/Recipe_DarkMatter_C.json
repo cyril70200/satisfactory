@@ -1,0 +1,84 @@
+{
+    "name": "Dark Matter Crystal",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_Diamond_C",
+            "amount": 1,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Turbo_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Diamond_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Pink_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Petroleum_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_OilBased_C",
+                    "factor": 0.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Diamond_Cloudy_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 5.0,
+            "rate": 150.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_DarkEnergy_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_SuperpositionOscillator_C",
+                    "factor": 1.2
+                },
+                {
+                    "recipe_id": "Recipe_TemporalProcessor_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_12_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_FicsoniumFuelRod_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_AlienPowerFuel_C",
+                    "factor": 2.0833333333333335
+                },
+                {
+                    "recipe_id": "Recipe_SyntheticPowerShard_C",
+                    "factor": 2.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_DarkMatter_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 1000.0,
+    "recipe_id": "Recipe_DarkMatter_C"
+}

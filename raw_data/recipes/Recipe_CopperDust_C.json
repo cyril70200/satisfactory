@@ -1,0 +1,44 @@
+{
+    "name": "Copper Powder",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_CopperIngot_C",
+            "amount": 30,
+            "rate": 300.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureCopperIngot_C",
+                    "factor": 6.666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CopperAlloyIngot_C",
+                    "factor": 3.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CopperIngot_Tempered_C",
+                    "factor": 5.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CopperIngot_Leached_C",
+                    "factor": 2.727272727272727
+                },
+                {
+                    "recipe_id": "Recipe_IngotCopper_C",
+                    "factor": 10.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CopperDust_C",
+            "amount": 5,
+            "rate": 50.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_CopperDust_C"
+}

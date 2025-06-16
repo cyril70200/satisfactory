@@ -1,0 +1,50 @@
+{
+    "name": "Alternate: Solid Steel Ingot",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronIngot_C",
+            "amount": 2,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotIron_C",
+                    "factor": 1.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PureIronIngot_C",
+                    "factor": 0.6153846153846154
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IronIngot_Leached_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IronIngot_Basic_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotIron_C",
+                    "factor": 0.5333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_Coal_C",
+            "amount": 2,
+            "rate": 40.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SteelIngot_C",
+            "amount": 3,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_FoundryMk1_C",
+    "power_use": 16.0,
+    "recipe_id": "Recipe_Alternate_IngotSteel_1_C"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Alternate: Sloppy Alumina",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreBauxite_C",
+            "amount": 10,
+            "rate": 200.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 10.0,
+            "rate": 200.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AluminaSolution_C",
+            "amount": 12.0,
+            "rate": 240.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_Alternate_SloppyAlumina_C"
+}

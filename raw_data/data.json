@@ -846,6 +846,48 @@
         }
     },
     "resources": {
+        "Desc_Leaves_C": {
+            "name": "Leaves",
+            "energy": 15.0,
+            "form": "RF_SOLID",
+            "points": 3
+        },
+        "Desc_Mycelia_C": {
+            "name": "Mycelia",
+            "energy": 20.0,
+            "form": "RF_SOLID",
+            "points": 10
+        },
+        "Desc_SpitterParts_C": {
+            "name": "Spitter Remains",
+            "energy": 0.0,
+            "form": "RF_SOLID",
+            "points": 0
+        },
+        "Desc_StingerParts_C": {
+            "name": "Stinger Remains",
+            "energy": 0.0,
+            "form": "RF_SOLID",
+            "points": 0
+        },
+        "Desc_HatcherParts_C": {
+            "name": "Hatcher Remains",
+            "energy": 0.0,
+            "form": "RF_SOLID",
+            "points": 0
+        },
+        "Desc_HogParts_C": {
+            "name": "Hog Remains",
+            "energy": 0.0,
+            "form": "RF_SOLID",
+            "points": 0
+        },
+        "Desc_Wood_C": {
+            "name": "Wood",
+            "energy": 100.0,
+            "form": "RF_SOLID",
+            "points": 30
+        },
         "Desc_OreIron_C": {
             "name": "Iron Ore",
             "energy": 0.0,

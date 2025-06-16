@@ -1,0 +1,52 @@
+{
+    "name": "Alternate: Quickwire Cable",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 3,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 0.09375
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 0.15
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 2,
+            "rate": 6.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.1
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Cable_C",
+            "amount": 11,
+            "rate": 33.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_Cable_2_C"
+}

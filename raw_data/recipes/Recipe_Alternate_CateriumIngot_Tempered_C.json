@@ -1,0 +1,34 @@
+{
+    "name": "Alternate: Tempered Caterium Ingot",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreGold_C",
+            "amount": 6,
+            "rate": 48.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_PetroleumCoke_C",
+            "amount": 2,
+            "rate": 16.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PetroleumCoke_C",
+                    "factor": 0.13333333333333333
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_GoldIngot_C",
+            "amount": 3,
+            "rate": 24.0
+        }
+    ],
+    "machine": "Build_FoundryMk1_C",
+    "power_use": 16.0,
+    "recipe_id": "Recipe_Alternate_CateriumIngot_Tempered_C"
+}

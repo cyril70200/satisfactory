@@ -1,0 +1,44 @@
+{
+    "name": "Iron Plate",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronIngot_C",
+            "amount": 3,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotIron_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PureIronIngot_C",
+                    "factor": 0.46153846153846156
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IronIngot_Leached_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IronIngot_Basic_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotIron_C",
+                    "factor": 0.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronPlate_C",
+            "amount": 2,
+            "rate": 20.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_IronPlate_C"
+}

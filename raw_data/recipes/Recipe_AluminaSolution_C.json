@@ -1,0 +1,33 @@
+{
+    "name": "Alumina Solution",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreBauxite_C",
+            "amount": 12,
+            "rate": 120.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 18.0,
+            "rate": 180.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AluminaSolution_C",
+            "amount": 12.0,
+            "rate": 120.0
+        },
+        {
+            "item": "Desc_Silica_C",
+            "amount": 5,
+            "rate": 50.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_AluminaSolution_C"
+}

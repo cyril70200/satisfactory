@@ -1,0 +1,36 @@
+{
+    "name": "Alternate: Pure Aluminum Ingot",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumScrap_C",
+            "amount": 2,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumScrap_C",
+                    "factor": 0.16666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectroAluminumScrap_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_InstantScrap_C",
+                    "factor": 0.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AluminumIngot_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_SmelterMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_PureAluminumIngot_C"
+}

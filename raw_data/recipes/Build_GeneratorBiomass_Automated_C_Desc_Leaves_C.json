@@ -1,0 +1,26 @@
+{
+    "name": "Biomass Burner (Leaves)",
+    "time": 0.5,
+    "ingredients": [
+        {
+            "item": "Desc_Leaves_C",
+            "amount": 1,
+            "rate": 120.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 0.25,
+            "rate": 30.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 0.25,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_GeneratorBiomass_Automated_C",
+    "power_use": 0.0
+}

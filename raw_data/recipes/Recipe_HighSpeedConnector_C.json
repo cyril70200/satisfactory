@@ -1,0 +1,80 @@
+{
+    "name": "High-Speed Connector",
+    "time": 16.0,
+    "ingredients": [
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 56,
+            "rate": 224.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 2.3333333333333335
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 3.7333333333333334
+                }
+            ]
+        },
+        {
+            "item": "Desc_Cable_C",
+            "amount": 10,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CoatedCable_C",
+                    "factor": 0.5555555555555556
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Cable_2_C",
+                    "factor": 1.2121212121212122
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Cable_1_C",
+                    "factor": 0.4
+                },
+                {
+                    "recipe_id": "Recipe_Cable_C",
+                    "factor": 1.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CircuitBoard_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectrodeCircuitBoard_C",
+                    "factor": 0.8
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_2_C",
+                    "factor": 0.2857142857142857
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_1_C",
+                    "factor": 0.26666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_HighSpeedConnector_C",
+            "amount": 1,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_HighSpeedConnector_C"
+}

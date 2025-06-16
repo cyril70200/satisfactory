@@ -1,0 +1,92 @@
+{
+    "name": "Alternate: Turbo Electric Motor",
+    "time": 64.0,
+    "ingredients": [
+        {
+            "item": "Desc_Motor_C",
+            "amount": 7,
+            "rate": 7.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Motor_C",
+                    "factor": 1.4
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectricMotor_C",
+                    "factor": 0.875
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Motor_1_C",
+                    "factor": 0.5833333333333334
+                }
+            ]
+        },
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 9,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_RadioControlUnit_C",
+                    "factor": 2.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlSystem_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RadioControlUnit_1_C",
+                    "factor": 2.25
+                }
+            ]
+        },
+        {
+            "item": "Desc_ElectromagneticControlRod_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_ElectromagneticControlRod_C",
+                    "factor": 1.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectromagneticControlRod_1_C",
+                    "factor": 0.625
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 7,
+            "rate": 7.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CopperRotor_C",
+                    "factor": 0.5833333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Rotor_C",
+                    "factor": 1.75
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Rotor_C",
+                    "factor": 1.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_MotorLightweight_C",
+            "amount": 3,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_TurboMotor_1_C"
+}

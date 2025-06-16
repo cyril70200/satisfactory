@@ -1,0 +1,60 @@
+{
+    "name": "Alternate: Steeled Frame",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronPlateReinforced_C",
+            "amount": 2,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_AdheredIronPlate_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_2_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_1_C",
+                    "factor": 0.13333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_IronPlateReinforced_C",
+                    "factor": 0.4
+                }
+            ]
+        },
+        {
+            "item": "Desc_SteelPipe_C",
+            "amount": 10,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SteelPipe_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Molded_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Iron_C",
+                    "factor": 0.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrame_C",
+            "amount": 3,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_ModularFrame_C"
+}

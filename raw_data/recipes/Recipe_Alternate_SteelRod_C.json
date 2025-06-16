@@ -1,0 +1,40 @@
+{
+    "name": "Alternate: Steel Rod",
+    "time": 5.0,
+    "ingredients": [
+        {
+            "item": "Desc_SteelIngot_C",
+            "amount": 1,
+            "rate": 12.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_IngotSteel_C",
+                    "factor": 0.26666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CokeSteelIngot_C",
+                    "factor": 0.12
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotSteel_2_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_IngotSteel_1_C",
+                    "factor": 0.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_IronRod_C",
+            "amount": 4,
+            "rate": 48.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_Alternate_SteelRod_C"
+}

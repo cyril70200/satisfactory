@@ -1,0 +1,36 @@
+{
+    "name": "Ficsite Trigon",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_FicsiteIngot_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_FicsiteIngot_Iron_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_FicsiteIngot_AL_C",
+                    "factor": 0.3333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_FicsiteIngot_CAT_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_FicsiteMesh_C",
+            "amount": 3,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_FicsiteMesh_C"
+}

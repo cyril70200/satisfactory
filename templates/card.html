@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+    .recipe-icon {
+        cursor: pointer;
+        margin-right: 0.5em;
+        color: #0d6efd;
+        font-size: 1.1em;
+        vertical-align: middle;
+    }
+    .recipe-icon:hover {
+        color: #0a58ca;
+    }
+    .resource-card {
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        width: 200px;
+        margin-bottom: 1rem;
+    }
+    .resource-card-header {
+        background-color: #198754;
+        color: white;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .byproduct-pill {
+        display: inline-block;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 0.2rem 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
+    .byproduct-used-pill {
+        display: inline-block;
+        background-color: #198754;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
+    .byproduct-label {
+        margin-bottom: 0.2rem;
+    }
+    .summary-card {
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    .summary-card .card-header {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        text-align: center;
+    }
+    .summary-pill {
+        display: inline-block;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.9rem;
+        margin: 0.2rem;
+        text-align: center;
+        width: 100%;
+    }
+    .summary-resource-pill {
+        background-color: #d1e7dd;
+        color: #0f5132;
+    }
+    .summary-byproduct-pill {
+        background-color: #cfe2ff;
+        color: #084298;
+    }
+    .summary-machine-pill {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+    </style>
+</head>
+<body class="bg-light">
+{% block content %}
+  <div class="container-fluid my-4">
+    <div class="row">
+      <!-- Main card tree column: show all item trees if any -->
+      <div class="col-12">
+        {% if project_items %}
+          <div class="row">
+            {% for item in project_items %}
+              <div class="col-md-12 mb-4">
+                <h5 class="mb-2">{{ item.name }} <span class="badge bg-primary">{{ item.rate }}/min</span></h5>
+                {% if item.card %}
+                  {% if item.card.outsource %}
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+                            <div class="fw-bold">{{ item.card.name }}</div>
+                            <div class="small">{{ item.card.rate|round(2) }}/min</div>
+                        </div>
+                    </div>
+                  {% else %}
+                    {{ render_card(item.card, True, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
+                    <!-- Modal for normal cards -->
+                    <div class="modal fade" id="recipeInfoModal-{{ item.card.recipe_id }}" tabindex="-1" aria-labelledby="recipeInfoModalLabel-{{ item.card.recipe_id }}" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content" style="background:#333;color:#fff;">
+                          <div class="modal-header" style="border-bottom:1px solid #444;">
+                            <h5 class="modal-title" id="recipeInfoModalLabel-{{ item.card.recipe_id }}">{{ item.card.recipe_name }}</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row mb-3 text-center">
+                              <div class="col-md-4">
+                                <div class="fw-bold text-secondary">Produced in</div>
+                                <div class="text-warning" style="font-size:1.1em;">{{ get_machine_name(item.card.machine_id) }}</div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="fw-bold text-secondary">Production Rate</div>
+                                <div class="text-warning" style="font-size:1.1em;">
+                                  {% set main_prod = item.card.recipe.products|selectattr('item', 'equalto', item.card.item)|first %}
+                                  {{ main_prod.rate|round(2) if main_prod else '?' }}/min
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="fw-bold text-secondary">Cycle Time</div>
+                                <div class="text-info" style="font-size:1.1em;">{{ item.card.recipe.time|round(2) if item.card.recipe and item.card.recipe.time else '?' }} sec</div>
+                              </div>
+                            </div>
+                            <div class="row mb-2">
+                              <div class="col-md-6">
+                                <div class="fw-bold mb-1">Ingredients:</div>
+                                <ul class="list-group list-group-flush">
+                                  {% for ing in item.card.recipe.ingredients %}
+                                  {% set ing_card = item.card.ingredients|selectattr('item', 'equalto', ing.item)|first %}
+                                  <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+                                    <span>{{ get_item_name(ing.item, recipes) }}</span>
+                                    <span class="fw-bold">{{ ing.amount }}/cycle</span>
+                                    <span class="text-info small ms-2">{{ ing_card.rate|round(2) if ing_card else '?' }}/min</span>
+                                  </li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="fw-bold mb-1">Products:</div>
+                                <ul class="list-group list-group-flush">
+                                  {% for prod in item.card.recipe.products %}
+                                  <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+                                    <span>{{ get_item_name(prod.item, recipes) }}</span>
+                                    <span class="fw-bold">{{ prod.amount }}/cycle</span>
+                                    <span class="text-info small ms-2">{{ prod.rate|round(2) }}/min</span>
+                                  </li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% else %}
+                  <div class="alert alert-info">No recipe selected for this item yet.</div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="alert alert-secondary text-center">No items in this project yet. Use the left bar to add items.</div>
+        {% endif %}
+      </div>
+    </div>
+    <!-- Right-side summary is now in layout.html -->
+  </div>
+{% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% macro render_card(card, is_root=False, show_header=False, recipes=None, get_item_name=None, get_machine_name=None) %}
+    {% if card.outsource %}
+        {{ outsource_card(card) }}
+    {% else %}
+        <div class="card mb-3 shadow-sm">
+        {% if show_header %}
+        <div class="card-header bg-primary text-white">
+            <div class="row align-items-center w-100 g-0">
+                <div class="col-auto fw-bold">{{ card.name }}</div>
+                <div class="col-auto small ms-2">
+                    {% if is_root %}
+                        <span id="rate-value" style="cursor:pointer;text-decoration:underline;" data-bs-toggle="modal" data-bs-target="#rateModal-{{ card.item }}">{{ card.rate|round(2) }}/min</span>
+                    {% else %}
+                        {{ card.rate|round(2) }}/min
+                    {% endif %}
+                </div>
+               <!-- {% if card.recipe_name %}
+                    <div class="col-auto ms-2">
+                        <span class="badge bg-info text-dark">Recipe: {{ card.recipe_name }}</span>
+                    </div>
+                {% endif %} -->
+                {% if card.byproducts and card.byproducts|length > 0 %}
+                    <div class="col-auto d-flex align-items-center ms-2">
+                        {% for bp in card.byproducts %}
+                            <span class="byproduct-pill ms-1">{{ bp.name }}: {{ bp.rate|round(2) }}/min</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="card-body">
+            {% if card.recipe_id %}
+            <div class="mb-2 d-flex align-items-center">
+                <span class="recipe-icon me-2" onclick="window.location='{{ url_for('select_recipe', item_id=card.item) }}'" title="Change recipe">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.693-1.115l.094-.319z"/>
+                  </svg>
+                </span>
+                <strong>Recipe:</strong>
+                <a href="#" class="ms-2 text-decoration-underline text-info fw-bold" data-bs-toggle="modal" data-bs-target="#recipeInfoModal-{{ card.recipe_id }}">{{ card.recipe_name }}</a>
+            </div>
+            <!-- Recipe Info Modal -->
+            <div class="modal fade" id="recipeInfoModal-{{ card.recipe_id }}" tabindex="-1" aria-labelledby="recipeInfoModalLabel-{{ card.recipe_id }}" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="background:#333;color:#fff;">
+                  <div class="modal-header" style="border-bottom:1px solid #444;">
+                    <h5 class="modal-title" id="recipeInfoModalLabel-{{ card.recipe_id }}">{{ card.recipe_name }}</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row mb-3 text-center">
+                      <div class="col-md-4">
+                        <div class="fw-bold text-secondary">Produced in</div>
+                        <div class="text-warning" style="font-size:1.1em;">{{ get_machine_name(card.machine_id) }}</div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="fw-bold text-secondary">Production Rate</div>
+                        <div class="text-warning" style="font-size:1.1em;">
+                          {% set main_prod = card.recipe.products|selectattr('item', 'equalto', card.item)|first %}
+                          {{ main_prod.rate|round(2) if main_prod else '?' }}/min
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="fw-bold text-secondary">Cycle Time</div>
+                        <div class="text-info" style="font-size:1.1em;">{{ card.recipe.time|round(2) if card.recipe and card.recipe.time else '?' }} sec</div>
+                      </div>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-md-6">
+                        <div class="fw-bold mb-1">Ingredients:</div>
+                        <ul class="list-group list-group-flush">
+                          {% for ing in card.recipe.ingredients %}
+                          <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+                            <span>{{ get_item_name(ing.item, recipes) }}</span>
+                            <span class="fw-bold">{{ ing.amount }}/cycle</span>
+                            <span class="text-info small ms-2">{{ ing.rate|round(2) }}/min</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="fw-bold mb-1">Products:</div>
+                        <ul class="list-group list-group-flush">
+                          {% for prod in card.recipe.products %}
+                          <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+                            <span>{{ get_item_name(prod.item, recipes) }}</span>
+                            <span class="fw-bold">{{ prod.amount }}/cycle</span>
+                            <span class="text-info small ms-2">{{ prod.rate|round(2) }}/min</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-2 mb-2">
+                <div class="col-md-6"><strong>Machines Needed:</strong><br>{% if card.machines is not none %}{{ card.machines|round(2) }}{% else %}N/A{% endif %} × {{ card.machine_name }}</div>
+                <div class="col-md-6"><strong>Total Power:</strong><br>{% if card.power is not none %}{{ card.power|round(2) }}{% else %}N/A{% endif %} MW</div>
+            </div>
+            <div class="mb-2"><strong>Ingredients:</strong></div>
+            <div class="row g-2">
+                {% set child_idx = 0 %}
+                {% for ing in card.ingredients %}
+                    {% set net_rate = ing.net_rate|round(2) %}
+                    {% if ing.resource %}
+                        <div class="col-auto">
+                            <div class="card resource-card mb-2">
+                                <div class="card-header resource-card-header {% if net_rate == 0 %}bg-secondary text-light opacity-75{% else %}bg-success text-white{% endif %} d-flex flex-column align-items-center">
+                                    <span>{{ ing.name }}</span>
+                                    {% if net_rate != 0 %}
+                                        <span>{{ net_rate }}/min</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% if ing.byproduct_used %}
+                                <span class="byproduct-used-pill mt-1">Byproduct used: {{ ing.byproduct_used|round(2) }}/min</span>
+                            {% endif %}
+                        </div>
+                    {% else %}
+                        <div class="col-auto">
+                            {% if ing.byproduct_used %}
+                                <span class="byproduct-used-pill mb-1">Byproduct used: {{ ing.byproduct_used|round(2) }}/min</span>
+                            {% endif %}
+                            {% if ing.child_card is defined and ing.child_card is mapping %}
+                                {% if ing.child_card.circular %}
+                                    <div class="card resource-card mb-2">
+                                        <div class="card-header resource-card-header bg-warning text-dark d-flex flex-column align-items-center">
+                                            <span>Circular dependency detected!</span>
+                                            <span class="small">Path: {{ ing.child_card.circular_path|join(' → ', attribute='name') }}</span>
+                                        </div>
+                                    </div>
+                                {% elif not ing.child_card.recipe_id %}
+                                    <div class="card resource-card mb-2">
+                                        <div class="card-header resource-card-header {% if net_rate == 0 %}bg-secondary text-light opacity-75{% else %}bg-warning text-dark{% endif %} d-flex flex-column align-items-center">
+                                            <span>{{ ing.name }}</span>
+                                            {% if net_rate != 0 %}
+                                                <span class="small">{{ net_rate }}/min</span>
+                                            {% endif %}
+                                        </div>
+                                        <div class="card-body text-center py-2">
+                                            {% if net_rate != 0 %}
+                                                <span>No recipe selected for this item yet.</span><br>
+                                                <a href="{{ url_for('select_recipe', item_id=ing.child_card.item) }}" class="small">Select a recipe</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    {% if ing.child_card.outsource %}
+                                        {{ outsource_card(ing.child_card, get_machine_name=get_machine_name, recipes=recipes) }}
+                                    {% else %}
+                                        {{ render_card(ing.child_card, False, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
+                                    {% endif %}
+                                {% endif %}
+                            {% else %}
+                                <div class="card resource-card mb-2">
+                                    <div class="card-header resource-card-header {% if net_rate == 0 %}bg-secondary text-light opacity-75{% else %}bg-warning text-dark{% endif %} d-flex flex-column align-items-center">
+                                        <span>{{ ing.name }}</span>
+                                        {% if net_rate != 0 %}
+                                            <span class="small">{{ net_rate }}/min</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="card-body text-center py-2">
+                                        {% if net_rate != 0 %}
+                                            <span>No recipe selected for this item yet.</span><br>
+                                            <a href="{{ url_for('select_recipe', item_id=ing.item) }}" class="small">Select a recipe</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <p class="text-muted"><em>No recipe selected for this item yet. <a href="{{ url_for('select_recipe', item_id=card.item) }}">Select a recipe</a></em></p>
+            {% endif %}
+        </div>
+        {% if is_root %}
+        <!-- Rate Change Modal for this item -->
+        <div class="modal fade" id="rateModal-{{ card.item }}" tabindex="-1" aria-labelledby="rateModalLabel-{{ card.item }}" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" style="max-width:95vw;">
+            <div class="modal-content" style="padding:1rem;">
+              <form method="post" action="/set_rate/{{ card.item }}">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="rateModalLabel-{{ card.item }}">Change Production Rate</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <label for="new_rate_{{ card.item }}" class="form-label">New rate for {{ card.name }} (per min):</label>
+                  <input type="number" step="any" min="0.01" class="form-control" id="new_rate_{{ card.item }}" name="new_rate" value="{{ card.rate|round(2) }}" required>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Update Rate</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+{% endmacro %}
+{% macro outsource_card(card, get_machine_name=None, recipes=None) %}
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+            <div class="fw-bold">{{ card.name }}</div>
+            <div class="small">{{ card.rate|round(2) }}/min</div>
+        </div>
+        <div class="card-body">
+            {% if card.recipe_id %}
+            <div class="mb-2 d-flex align-items-center">
+                <span class="recipe-icon me-2" onclick="window.location='{{ url_for('select_recipe', item_id=card.item) }}'" title="Change recipe">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.693-1.115l.094-.319z"/>
+                  </svg>
+                </span>
+                <strong>Recipe:</strong>
+                <a href="#" class="ms-2 text-decoration-underline text-info fw-bold" data-bs-toggle="modal" data-bs-target="#recipeInfoModal-{{ card.recipe_id }}">{{ card.recipe_name }}</a>
+            </div>
+            <!-- Recipe Info Modal -->
+            <div class="modal fade" id="recipeInfoModal-{{ card.recipe_id }}" tabindex="-1" aria-labelledby="recipeInfoModalLabel-{{ card.recipe_id }}" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="background:#333;color:#fff;">
+                  <div class="modal-header" style="border-bottom:1px solid #444;">
+                    <h5 class="modal-title" id="recipeInfoModalLabel-{{ card.recipe_id }}">{{ card.recipe_name }}</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row mb-3 text-center">
+                      <div class="col-md-4">
+                        <div class="fw-bold text-secondary">Produced in</div>
+                        <div class="text-warning" style="font-size:1.1em;">{{ get_machine_name(card.machine_id) }}</div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="fw-bold text-secondary">Production Rate</div>
+                        <div class="text-warning" style="font-size:1.1em;">
+                          {% set main_prod = card.recipe.products|selectattr('item', 'equalto', card.item)|first %}
+                          {{ main_prod.rate|round(2) if main_prod else '?' }}/min
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="fw-bold text-secondary">Cycle Time</div>
+                        <div class="text-info" style="font-size:1.1em;">{{ card.recipe.time|round(2) if card.recipe and card.recipe.time else '?' }} sec</div>
+                      </div>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-md-6">
+                        <div class="fw-bold mb-1">Ingredients:</div>
+                        <ul class="list-group list-group-flush">
+                          {% for ing in card.recipe.ingredients %}
+                          <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+                            <span>{{ get_item_name(ing.item, recipes) }}</span>
+                            <span class="fw-bold">{{ ing.amount }}/cycle</span>
+                            <span class="text-info small ms-2">{{ ing.rate|round(2) }}/min</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="fw-bold mb-1">Products:</div>
+                        <ul class="list-group list-group-flush">
+                          {% for prod in card.recipe.products %}
+                          <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+                            <span>{{ get_item_name(prod.item, recipes) }}</span>
+                            <span class="fw-bold">{{ prod.amount }}/cycle</span>
+                            <span class="text-info small ms-2">{{ prod.rate|round(2) }}/min</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}

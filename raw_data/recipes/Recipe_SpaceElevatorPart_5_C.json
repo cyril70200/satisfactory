@@ -1,0 +1,96 @@
+{
+    "name": "Adaptive Control Unit",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpaceElevatorPart_3_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_HighSpeedWiring_C",
+                    "factor": 0.625
+                },
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_3_C",
+                    "factor": 1.6666666666666667
+                }
+            ]
+        },
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CircuitBoard_C",
+                    "factor": 0.625
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectrodeCircuitBoard_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_2_C",
+                    "factor": 0.35714285714285715
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_1_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_ModularFrameHeavy_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyFlexibleFrame_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_ModularFrameHeavy_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ModularFrameHeavy_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_Computer_C",
+            "amount": 2,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Computer_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Computer_2_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Computer_1_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SpaceElevatorPart_5_C",
+            "amount": 1,
+            "rate": 1.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_SpaceElevatorPart_5_C"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "Alternate: Heat Exchanger",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 3,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 0.25
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 3,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AluminumPlateReinforced_C",
+            "amount": 1,
+            "rate": 10.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_HeatSink_1_C"
+}

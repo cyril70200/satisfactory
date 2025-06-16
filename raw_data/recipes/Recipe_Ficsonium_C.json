@@ -1,0 +1,76 @@
+{
+    "name": "Ficsonium",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_PlutoniumWaste_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Build_GeneratorNuclear_C_Desc_PlutoniumFuelRod_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_SingularityCell_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SingularityCell_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 20.0,
+            "rate": 200.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_DarkEnergy_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_SuperpositionOscillator_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_TemporalProcessor_C",
+                    "factor": 2.6666666666666665
+                },
+                {
+                    "recipe_id": "Recipe_SpaceElevatorPart_12_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_FicsoniumFuelRod_C",
+                    "factor": 3.3333333333333335
+                },
+                {
+                    "recipe_id": "Recipe_AlienPowerFuel_C",
+                    "factor": 2.7777777777777777
+                },
+                {
+                    "recipe_id": "Recipe_SyntheticPowerShard_C",
+                    "factor": 3.3333333333333335
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Ficsonium_C",
+            "amount": 1,
+            "rate": 10.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 1000.0,
+    "recipe_id": "Recipe_Ficsonium_C"
+}

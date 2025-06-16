@@ -1,0 +1,40 @@
+{
+    "name": "Fuel-Powered Generator (Fuel)",
+    "time": 3.0,
+    "ingredients": [
+        {
+            "item": "Desc_LiquidFuel_C",
+            "amount": 1,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_LiquidFuel_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_ResidualFuel_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+                    "factor": 0.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Fuel",
+            "amount": 12.5,
+            "rate": 250.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 12.5,
+            "rate": 250.0
+        }
+    ],
+    "machine": "Build_GeneratorFuel_C",
+    "power_use": 0.0
+}

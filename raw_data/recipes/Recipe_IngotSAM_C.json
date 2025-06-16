@@ -1,0 +1,22 @@
+{
+    "name": "Reanimated SAM",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_SAM_C",
+            "amount": 4,
+            "rate": 120.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SAMIngot_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_IngotSAM_C"
+}

@@ -1,0 +1,92 @@
+{
+    "name": "Alternate: Radio Control System",
+    "time": 40.0,
+    "ingredients": [
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 1,
+            "rate": 2.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 10,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CircuitBoard_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectrodeCircuitBoard_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_2_C",
+                    "factor": 1.4285714285714286
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CircuitBoard_1_C",
+                    "factor": 1.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_AluminumCasing_C",
+            "amount": 60,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminumCasing_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_AlcladCasing_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 30,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 3.0
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 3.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 3,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_RadioControlSystem_C"
+}

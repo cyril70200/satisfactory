@@ -1,0 +1,43 @@
+{
+    "name": "Stun Rebar",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpikedRebar_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SpikedRebar_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 5,
+            "rate": 50.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 0.5208333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 0.8333333333333334
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rebar_Stunshot_C",
+            "amount": 1,
+            "rate": 10.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0
+}

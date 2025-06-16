@@ -1,0 +1,40 @@
+{
+    "name": "Packaged Nitric Acid",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_NitricAcid_C",
+            "amount": 1.0,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_NitricAcid_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_GasTank_C",
+            "amount": 1,
+            "rate": 30.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_GasTank_C",
+                    "factor": 0.5
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PackagedNitricAcid_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0,
+    "recipe_id": "Recipe_PackagedNitricAcid_C"
+}

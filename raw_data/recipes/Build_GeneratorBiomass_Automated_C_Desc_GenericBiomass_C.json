@@ -1,0 +1,44 @@
+{
+    "name": "Biomass Burner (Biomass)",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_GenericBiomass_C",
+            "amount": 1,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Biomass_Mycelia_C",
+                    "factor": 0.06666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_AlienProtein_C",
+                    "factor": 0.006666666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_Leaves_C",
+                    "factor": 0.16666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Biomass_Wood_C",
+                    "factor": 0.03333333333333333
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Other",
+            "amount": 3.0,
+            "rate": 30.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 3.0,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_GeneratorBiomass_Automated_C",
+    "power_use": 0.0
+}

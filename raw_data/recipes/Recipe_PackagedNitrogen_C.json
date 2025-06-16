@@ -1,0 +1,34 @@
+{
+    "name": "Packaged Nitrogen Gas",
+    "time": 1.0,
+    "ingredients": [
+        {
+            "item": "Desc_NitrogenGas_C",
+            "amount": 4.0,
+            "rate": 240.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_GasTank_C",
+            "amount": 1,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_GasTank_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_PackagedNitrogenGas_C",
+            "amount": 1,
+            "rate": 60.0
+        }
+    ],
+    "machine": "Build_Packager_C",
+    "power_use": 10.0,
+    "recipe_id": "Recipe_PackagedNitrogen_C"
+}

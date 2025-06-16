@@ -1,0 +1,28 @@
+{
+    "name": "Alternate: Petroleum Diamonds",
+    "time": 2.0,
+    "ingredients": [
+        {
+            "item": "Desc_PetroleumCoke_C",
+            "amount": 24,
+            "rate": 720.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PetroleumCoke_C",
+                    "factor": 6.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Diamond_C",
+            "amount": 1,
+            "rate": 30.0
+        }
+    ],
+    "machine": "Build_HadronCollider_C",
+    "power_use": 500.0,
+    "recipe_id": "Recipe_Alternate_Diamond_Petroleum_C"
+}

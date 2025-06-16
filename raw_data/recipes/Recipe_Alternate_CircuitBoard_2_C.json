@@ -1,0 +1,52 @@
+{
+    "name": "Alternate: Caterium Circuit Board",
+    "time": 48.0,
+    "ingredients": [
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 10,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedWire_C",
+            "amount": 30,
+            "rate": 60.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quickwire_C",
+                    "factor": 0.625
+                },
+                {
+                    "recipe_id": "Recipe_Quickwire_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 7,
+            "rate": 14.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_CircuitBoard_2_C"
+}

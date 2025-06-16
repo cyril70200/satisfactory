@@ -1,0 +1,56 @@
+{
+    "name": "Smokeless Powder",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_Gunpowder_C",
+            "amount": 2,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Gunpowder_1_C",
+                    "factor": 0.4166666666666667
+                },
+                {
+                    "recipe_id": "Recipe_Gunpowder_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_HeavyOilResidue_C",
+            "amount": 1.0,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_PolymerResin_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeavyOilResidue_C",
+                    "factor": 0.25
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_GunpowderMK2_C",
+            "amount": 2,
+            "rate": 20.0
+        }
+    ],
+    "machine": "Build_OilRefinery_C",
+    "power_use": 30.0,
+    "recipe_id": "Recipe_GunpowderMK2_C"
+}

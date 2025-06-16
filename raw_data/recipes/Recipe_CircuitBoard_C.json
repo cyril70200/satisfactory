@@ -1,0 +1,52 @@
+{
+    "name": "Circuit Board",
+    "time": 8.0,
+    "ingredients": [
+        {
+            "item": "Desc_CopperSheet_C",
+            "amount": 2,
+            "rate": 16.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+                    "factor": 0.6666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_CopperSheet_C",
+                    "factor": 1.6
+                }
+            ]
+        },
+        {
+            "item": "Desc_Plastic_C",
+            "amount": 4,
+            "rate": 32.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Plastic_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_ResidualPlastic_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Plastic_1_C",
+                    "factor": 0.5333333333333333
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_CircuitBoard_C",
+            "amount": 1,
+            "rate": 8.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_CircuitBoard_C"
+}

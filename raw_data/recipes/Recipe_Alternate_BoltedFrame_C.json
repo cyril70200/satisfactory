@@ -1,0 +1,60 @@
+{
+    "name": "Alternate: Bolted Frame",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_IronPlateReinforced_C",
+            "amount": 3,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_AdheredIronPlate_C",
+                    "factor": 2.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_2_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ReinforcedIronPlate_1_C",
+                    "factor": 0.6
+                },
+                {
+                    "recipe_id": "Recipe_IronPlateReinforced_C",
+                    "factor": 1.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_IronScrew_C",
+            "amount": 56,
+            "rate": 168.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Screw_2_C",
+                    "factor": 0.6461538461538462
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Screw_C",
+                    "factor": 2.8
+                },
+                {
+                    "recipe_id": "Recipe_Screw_C",
+                    "factor": 4.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrame_C",
+            "amount": 2,
+            "rate": 6.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_BoltedFrame_C"
+}

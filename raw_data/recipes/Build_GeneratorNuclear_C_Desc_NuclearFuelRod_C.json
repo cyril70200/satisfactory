@@ -1,0 +1,48 @@
+{
+    "name": "Nuclear Power Plant (Uranium Fuel Rod)",
+    "time": 300.0,
+    "ingredients": [
+        {
+            "item": "Desc_NuclearFuelRod_C",
+            "amount": 1,
+            "rate": 1.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_NuclearFuelRod_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_NuclearFuelRod_1_C",
+                    "factor": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 1200.0,
+            "rate": 1200.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Power_Produced_Nuclear",
+            "amount": 12500.0,
+            "rate": 12500.0
+        },
+        {
+            "item": "Power_Produced",
+            "amount": 12500.0,
+            "rate": 12500.0
+        },
+        {
+            "item": "Desc_NuclearWaste_C",
+            "amount": 50.0,
+            "rate": 50.0
+        }
+    ],
+    "machine": "Build_GeneratorNuclear_C",
+    "power_use": 0.0,
+    "recipe_id": "Build_GeneratorNuclear_C_Desc_NuclearFuelRod_C"
+}

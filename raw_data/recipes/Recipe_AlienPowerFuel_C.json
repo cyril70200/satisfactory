@@ -1,0 +1,69 @@
+{
+    "name": "Alien Power Matrix",
+    "time": 24.0,
+    "ingredients": [
+        {
+            "item": "Desc_SAMFluctuator_C",
+            "amount": 5,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SAMFluctuator_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalShard_C",
+            "amount": 3,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SyntheticPowerShard_C",
+                    "factor": 1.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumOscillator_C",
+            "amount": 3,
+            "rate": 9.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SuperpositionOscillator_C",
+                    "factor": 1.8
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuantumEnergy_C",
+            "amount": 24.0,
+            "rate": 72.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_QuantumEnergy_C",
+                    "factor": 0.36
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_AlienPowerFuel_C",
+            "amount": 1,
+            "rate": 3.0
+        },
+        {
+            "item": "Desc_DarkEnergy_C",
+            "amount": 24.0,
+            "rate": 72.0
+        }
+    ],
+    "machine": "Build_QuantumEncoder_C",
+    "power_use": 1000.0,
+    "recipe_id": "Recipe_AlienPowerFuel_C"
+}

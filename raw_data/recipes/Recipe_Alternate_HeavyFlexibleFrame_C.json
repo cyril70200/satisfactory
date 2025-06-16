@@ -1,0 +1,92 @@
+{
+    "name": "Alternate: Heavy Flexible Frame",
+    "time": 16.0,
+    "ingredients": [
+        {
+            "item": "Desc_ModularFrame_C",
+            "amount": 5,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_ModularFrame_C",
+                    "factor": 10.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_BoltedFrame_C",
+                    "factor": 3.3333333333333335
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ModularFrame_C",
+                    "factor": 6.666666666666667
+                }
+            ]
+        },
+        {
+            "item": "Desc_SteelPlateReinforced_C",
+            "amount": 3,
+            "rate": 12.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_EncasedIndustrialBeam_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_EncasedIndustrialBeam_C",
+                    "factor": 3.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rubber_C",
+            "amount": 20,
+            "rate": 80.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Rubber_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_ResidualRubber_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+                    "factor": 1.3333333333333333
+                }
+            ]
+        },
+        {
+            "item": "Desc_IronScrew_C",
+            "amount": 104,
+            "rate": 416.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Screw_2_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Screw_C",
+                    "factor": 6.933333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Screw_C",
+                    "factor": 10.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameHeavy_C",
+            "amount": 1,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_HeavyFlexibleFrame_C"
+}

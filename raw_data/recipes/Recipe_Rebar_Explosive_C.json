@@ -1,0 +1,59 @@
+{
+    "name": "Explosive Rebar",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_SpikedRebar_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SpikedRebar_C",
+                    "factor": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "item": "Desc_GunpowderMK2_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_GunpowderMK2_C",
+                    "factor": 0.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_SteelPipe_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_SteelPipe_C",
+                    "factor": 0.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Molded_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_SteelPipe_Iron_C",
+                    "factor": 0.4
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Rebar_Explosive_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0
+}

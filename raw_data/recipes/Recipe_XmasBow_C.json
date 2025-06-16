@@ -1,0 +1,22 @@
+{
+    "name": "FICSMAS Bow",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_Gift_C",
+            "amount": 2,
+            "rate": 10.0,
+            "resource": false
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_XmasBow_C",
+            "amount": 1,
+            "rate": 5.0
+        }
+    ],
+    "machine": "Build_ConstructorMk1_C",
+    "power_use": 4.0,
+    "recipe_id": "Recipe_XmasBow_C"
+}

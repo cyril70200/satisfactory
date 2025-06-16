@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satisfactory Project Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left nav bar -->
+        <nav class="col-md-2 col-12 bg-light sidebar py-3" style="min-height:100vh;">
+          <div class="d-flex flex-column align-items-start gap-3">
+            <button class="btn btn-outline-primary w-100 mb-2" id="newProjectBtn">New Project</button>
+            <button class="btn btn-outline-secondary w-100 mb-2" id="openProjectBtn">Open Project</button>
+            <button class="btn btn-outline-success w-100 mb-2" id="saveProjectBtn">Save Project</button>
+            <div class="w-100 mb-2 d-flex align-items-center justify-content-between">
+              <span class="fw-bold" id="projectNameDisplay">{{ project_name }}</span>
+              <span class="ms-2" style="cursor:pointer;" id="renameProjectBtn" title="Rename project">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                  <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                  <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.693-1.115l.094-.319z"/>
+                </svg>
+              </span>
+            </div>
+            <div class="w-100">
+              <div class="fw-bold mb-2">Current Items</div>
+              <ul class="list-group mb-2" id="currentItemsList">
+                <!-- Populated by backend: each item as <li>Item Name / rate</li> -->
+                {% if project_items %}
+                  {% for item in project_items %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <span>{{ item.name }}</span>
+                      <span class="badge bg-primary rounded-pill">{{ item.rate }}/min</span>
+                      <button class="btn btn-sm btn-link text-danger p-0 ms-2 remove-item-btn" data-item-id="{{ item.item }}" title="Remove item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                          <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm3.354 4.646a.5.5 0 0 1 0 .708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                      </button>
+                    </li>
+                  {% endfor %}
+                {% else %}
+                  <li class="list-group-item text-muted">No items yet</li>
+                {% endif %}
+              </ul>
+              <button class="btn btn-sm btn-success w-100" id="addItemBtn" data-bs-toggle="modal" data-bs-target="#addItemModal">Add another item</button>
+            </div>
+          </div>
+        </nav>
+        <!-- Main content -->
+        <main class="col-md-8 col-12 py-4">
+          {% block content %}{% endblock %}
+        </main>
+        <!-- Right-side production report -->
+        <aside class="col-md-2 col-12 py-4">
+          <div class="card summary-card shadow-sm p-2" style="min-width:180px; max-width:260px;">
+            <div class="card-header bg-light fw-bold text-center" style="font-size:1.1em;">Production Report</div>
+            <div class="card-body p-2">
+              <div class="mb-3">
+                <div class="fw-bold text-primary mb-1">Buildings</div>
+                <div class="mb-2 small">Total Power: <span class="fw-bold text-danger">{{ total_power|round(2) }} MW</span></div>
+                {% if buildings %}
+                  <ul class="list-group mb-2">
+                    {% for b in buildings.values() %}
+                      <li class="list-group-item d-flex flex-column align-items-center p-2">
+                        <span class="fw-bold">{{ b.name }}</span>
+                        <span class="small">Machines: <span class="fw-bold">{{ b.machines }}</span></span>
+                        <span class="small">Power: {{ b.power|round(2) }} MW</span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <div class="text-muted small">No buildings yet.</div>
+                {% endif %}
+              </div>
+              <div class="fw-bold text-primary mb-1">Items</div>
+              {% if summary %}
+                <div class="d-flex flex-wrap gap-1 justify-content-center">
+                  {% for s in summary.values() %}
+                    <div class="summary-pill summary-{{ s.type }}-pill mb-1 mx-1 d-flex flex-column align-items-center {{ 'bg-secondary text-light' if s.recipe_id == '__outsourced__' or s.outsource else '' }}" style="min-width:90px; max-width:120px;">
+                      <span class="fw-bold">{{ s.name }}</span>
+                      <span class="small">{{ s.rate|round(2) }}/min</span>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <div class="text-muted text-center">No production yet.</div>
+              {% endif %}
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Add Item Modal -->
+    <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 420px; width: 100vw; margin: 0 auto;">
+        <div class="modal-content" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+          <form method="post" action="/add_item" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+            <div class="modal-header" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+              <h5 class="modal-title" id="addItemModalLabel">Add Item to Project</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+              <label for="itemSearchBox" class="form-label">Search Item</label>
+              <input type="text" class="form-control mb-2" id="itemSearchBox" placeholder="Type to search..." onkeyup="filterAddItemOptions()" style="max-width:100%; width:100%;">
+              <label for="itemSelect" class="form-label">Item</label>
+              <select class="form-select" id="itemSelect" name="item" required style="max-width:100%; width:100%;">
+                {% for item_id, name in items %}
+                  <option value="{{ item_id }}">{{ name }}</option>
+                {% endfor %}
+              </select>
+              <label for="itemRate" class="form-label mt-2">Rate (per minute)</label>
+              <input type="number" class="form-control" id="itemRate" name="rate" min="0.01" step="any" required style="max-width:100%; width:100%;">
+            </div>
+            <div class="modal-footer" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Add Item</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rename Project Modal -->
+    <div class="modal fade" id="renameProjectModal" tabindex="-1" aria-labelledby="renameProjectModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 420px; width: 100vw; margin: 0 auto;">
+        <div class="modal-content" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+          <form id="renameProjectForm" method="post" action="/set_project_name" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+            <div class="modal-header" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+              <h5 class="modal-title" id="renameProjectModalLabel">Rename Project</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+              <label for="projectNameInput" class="form-label">Project Name</label>
+              <input type="text" class="form-control" id="projectNameInput" name="project_name" value="{{ project_name }}" required maxlength="64" style="max-width:100%; width:100%; box-sizing: border-box;">
+            </div>
+            <div class="modal-footer" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Rename</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Open Project Form (file input hidden, form visible for submission) -->
+    <form id="openProjectForm" method="post" action="/open_project" enctype="multipart/form-data">
+      <input type="file" id="openProjectFile" name="project_file" accept="application/json" style="display:none">
+    </form>
+
+    {% block scripts %}{% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function filterAddItemOptions() {
+      var input = document.getElementById('itemSearchBox').value.toLowerCase();
+      var select = document.getElementById('itemSelect');
+      for (var i = 0; i < select.options.length; i++) {
+        var option = select.options[i];
+        var text = option.text.toLowerCase();
+        option.style.display = text.includes(input) ? '' : 'none';
+      }
+      // Auto-select first visible
+      var anyVisible = false;
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].style.display !== 'none') {
+          select.selectedIndex = i;
+          anyVisible = true;
+          break;
+        }
+      }
+      if (!anyVisible) {
+        select.selectedIndex = -1;
+      }
+    }
+
+    // New Project button with confirmation
+    document.addEventListener('DOMContentLoaded', function() {
+      var newProjectBtn = document.getElementById('newProjectBtn');
+      if (newProjectBtn) {
+        newProjectBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (confirm('Start a new project? Unsaved changes will be lost.')) {
+            fetch('/new_project', {method: 'POST', headers: {'X-Requested-With': 'XMLHttpRequest'}})
+              .then(r => r.json())
+              .then(function(data) { window.location = '/'; });
+          }
+        });
+      }
+    });
+
+    // Save Project button
+    document.addEventListener('DOMContentLoaded', function() {
+      var saveProjectBtn = document.getElementById('saveProjectBtn');
+      if (saveProjectBtn) {
+        saveProjectBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location = '/save_project';
+        });
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var renameBtn = document.getElementById('renameProjectBtn');
+      var renameModal = new bootstrap.Modal(document.getElementById('renameProjectModal'));
+      if (renameBtn) {
+        renameBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.getElementById('projectNameInput').value = document.getElementById('projectNameDisplay').textContent;
+          renameModal.show();
+        });
+      }
+      var renameForm = document.getElementById('renameProjectForm');
+      if (renameForm) {
+        renameForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          fetch('/set_project_name', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'project_name=' + encodeURIComponent(document.getElementById('projectNameInput').value)
+          }).then(function() { window.location.reload(); });
+        });
+      }
+    });
+
+    // Remove item with confirmation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.remove-item-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var itemId = btn.getAttribute('data-item-id');
+          var itemName = btn.parentElement.querySelector('span').innerText;
+          if (confirm('Remove "' + itemName + '" from project?')) {
+            fetch('/remove_item/' + encodeURIComponent(itemId), {method: 'POST', headers: {'X-Requested-With': 'XMLHttpRequest'}})
+              .then(function(r) { return r.json(); })
+              .then(function(data) { window.location = '/'; });
+          }
+        });
+      });
+    });
+
+    // Open Project button logic
+    document.addEventListener('DOMContentLoaded', function() {
+      var openProjectBtn = document.getElementById('openProjectBtn');
+      var openProjectFile = document.getElementById('openProjectFile');
+      var openProjectForm = document.getElementById('openProjectForm');
+      if (openProjectBtn && openProjectFile && openProjectForm) {
+        openProjectBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('Open Project button clicked');
+          openProjectFile.value = null;
+          openProjectFile.click();
+        });
+        openProjectFile.addEventListener('change', function() {
+          if (openProjectFile.files.length > 0) {
+            console.log('File selected:', openProjectFile.files[0].name);
+            openProjectForm.submit();
+          }
+        });
+      }
+    });
+    </script>
+</body>
+</html>

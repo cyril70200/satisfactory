@@ -1,0 +1,68 @@
+{
+    "name": "Alternate: Fused Wire",
+    "time": 20.0,
+    "ingredients": [
+        {
+            "item": "Desc_CopperIngot_C",
+            "amount": 4,
+            "rate": 12.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureCopperIngot_C",
+                    "factor": 0.26666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CopperAlloyIngot_C",
+                    "factor": 0.12
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CopperIngot_Tempered_C",
+                    "factor": 0.2
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CopperIngot_Leached_C",
+                    "factor": 0.10909090909090909
+                },
+                {
+                    "recipe_id": "Recipe_IngotCopper_C",
+                    "factor": 0.4
+                }
+            ]
+        },
+        {
+            "item": "Desc_GoldIngot_C",
+            "amount": 1,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureCateriumIngot_C",
+                    "factor": 0.25
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CateriumIngot_Tempered_C",
+                    "factor": 0.125
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CateriumIngot_Leached_C",
+                    "factor": 0.08333333333333333
+                },
+                {
+                    "recipe_id": "Recipe_IngotCaterium_C",
+                    "factor": 0.2
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Wire_C",
+            "amount": 30,
+            "rate": 90.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_FusedWire_C"
+}

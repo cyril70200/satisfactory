@@ -1,0 +1,34 @@
+{
+    "name": "Alternate: Coke Steel Ingot",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreIron_C",
+            "amount": 15,
+            "rate": 75.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_PetroleumCoke_C",
+            "amount": 15,
+            "rate": 75.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_PetroleumCoke_C",
+                    "factor": 0.625
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_SteelIngot_C",
+            "amount": 20,
+            "rate": 100.0
+        }
+    ],
+    "machine": "Build_FoundryMk1_C",
+    "power_use": 16.0,
+    "recipe_id": "Recipe_Alternate_CokeSteelIngot_C"
+}

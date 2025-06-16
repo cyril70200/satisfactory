@@ -1,0 +1,67 @@
+{
+    "name": "Encased Uranium Cell",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_OreUranium_C",
+            "amount": 10,
+            "rate": 50.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Cement_C",
+            "amount": 3,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_WetConcrete_C",
+                    "factor": 0.1875
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_RubberConcrete_C",
+                    "factor": 0.16666666666666666
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Concrete_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Concrete_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 8.0,
+            "rate": 40.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_SulfuricAcid_C",
+                    "factor": 0.8
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_UraniumCell_C",
+            "amount": 5,
+            "rate": 25.0
+        },
+        {
+            "item": "Desc_SulfuricAcid_C",
+            "amount": 2.0,
+            "rate": 10.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_UraniumCell_C"
+}

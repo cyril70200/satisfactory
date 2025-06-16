@@ -1,0 +1,45 @@
+{
+    "name": "Alternate: Distilled Silica",
+    "time": 6.0,
+    "ingredients": [
+        {
+            "item": "Desc_DissolvedSilica_C",
+            "amount": 12.0,
+            "rate": 120.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Purified_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_Stone_C",
+            "amount": 5,
+            "rate": 50.0,
+            "resource": true
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 10.0,
+            "rate": 100.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Silica_C",
+            "amount": 27,
+            "rate": 270.0
+        },
+        {
+            "item": "Desc_Water_C",
+            "amount": 8.0,
+            "rate": 80.0
+        }
+    ],
+    "machine": "Build_Blender_C",
+    "power_use": 75.0,
+    "recipe_id": "Recipe_Alternate_Silica_Distilled_C"
+}

@@ -1,0 +1,46 @@
+{
+    "name": "Alternate: Fine Concrete",
+    "time": 12.0,
+    "ingredients": [
+        {
+            "item": "Desc_Silica_C",
+            "amount": 3,
+            "rate": 15.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_AluminaSolution_C",
+                    "factor": 0.3
+                },
+                {
+                    "recipe_id": "Recipe_Silica_C",
+                    "factor": 0.375
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_Distilled_C",
+                    "factor": 0.05555555555555555
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Silica_C",
+                    "factor": 0.26785714285714285
+                }
+            ]
+        },
+        {
+            "item": "Desc_Stone_C",
+            "amount": 12,
+            "rate": 60.0,
+            "resource": true
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_Cement_C",
+            "amount": 10,
+            "rate": 50.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_Concrete_C"
+}

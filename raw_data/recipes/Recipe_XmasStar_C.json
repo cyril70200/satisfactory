@@ -1,0 +1,39 @@
+{
+    "name": "FICSMAS Wonder Star",
+    "time": 60.0,
+    "ingredients": [
+        {
+            "item": "Desc_XmasWreath_C",
+            "amount": 5,
+            "rate": 5.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_XmasWreath_C",
+                    "factor": 2.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_CandyCane_C",
+            "amount": 20,
+            "rate": 20.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CandyCane_C",
+                    "factor": 4.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_XmasStar_C",
+            "amount": 1,
+            "rate": 1.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0
+}

@@ -1,0 +1,84 @@
+{
+    "name": "Alternate: Uranium Fuel Unit",
+    "time": 300.0,
+    "ingredients": [
+        {
+            "item": "Desc_UraniumCell_C",
+            "amount": 100,
+            "rate": 100.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_UraniumCell_C",
+                    "factor": 4.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_UraniumCell_1_C",
+                    "factor": 5.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_ElectromagneticControlRod_C",
+            "amount": 10,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_ElectromagneticControlRod_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_ElectromagneticControlRod_1_C",
+                    "factor": 1.25
+                }
+            ]
+        },
+        {
+            "item": "Desc_CrystalOscillator_C",
+            "amount": 3,
+            "rate": 3.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_CrystalOscillator_C",
+                    "factor": 1.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+                    "factor": 1.5
+                }
+            ]
+        },
+        {
+            "item": "Desc_Rotor_C",
+            "amount": 10,
+            "rate": 10.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_CopperRotor_C",
+                    "factor": 0.8333333333333334
+                },
+                {
+                    "recipe_id": "Recipe_Rotor_C",
+                    "factor": 2.5
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Rotor_C",
+                    "factor": 2.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_NuclearFuelRod_C",
+            "amount": 3,
+            "rate": 3.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_NuclearFuelRod_1_C"
+}

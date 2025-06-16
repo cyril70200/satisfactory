@@ -1,0 +1,48 @@
+{
+    "name": "Alternate: Electromagnetic Connection Rod",
+    "time": 15.0,
+    "ingredients": [
+        {
+            "item": "Desc_Stator_C",
+            "amount": 2,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Stator_C",
+                    "factor": 1.6
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Stator_C",
+                    "factor": 1.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedConnector_C",
+            "amount": 1,
+            "rate": 4.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_HighSpeedConnector_C",
+                    "factor": 1.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HighSpeedConnector_C",
+                    "factor": 1.0
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ElectromagneticControlRod_C",
+            "amount": 2,
+            "rate": 8.0
+        }
+    ],
+    "machine": "Build_AssemblerMk1_C",
+    "power_use": 15.0,
+    "recipe_id": "Recipe_Alternate_ElectromagneticControlRod_1_C"
+}

@@ -1,0 +1,72 @@
+{
+    "name": "Alternate: Radio Connection Unit",
+    "time": 16.0,
+    "ingredients": [
+        {
+            "item": "Desc_AluminumPlateReinforced_C",
+            "amount": 4,
+            "rate": 16.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_HeatSink_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HeatSink_1_C",
+                    "factor": 1.6
+                }
+            ]
+        },
+        {
+            "item": "Desc_HighSpeedConnector_C",
+            "amount": 2,
+            "rate": 8.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_HighSpeedConnector_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_HighSpeedConnector_C",
+                    "factor": 2.0
+                }
+            ]
+        },
+        {
+            "item": "Desc_QuartzCrystal_C",
+            "amount": 12,
+            "rate": 48.0,
+            "resource": false,
+            "recipes": [
+                {
+                    "recipe_id": "Recipe_Alternate_PureQuartzCrystal_C",
+                    "factor": 0.8571428571428571
+                },
+                {
+                    "recipe_id": "Recipe_QuartzCrystal_C",
+                    "factor": 2.0
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Purified_C",
+                    "factor": 0.64
+                },
+                {
+                    "recipe_id": "Recipe_Alternate_Quartz_Fused_C",
+                    "factor": 0.8888888888888888
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "item": "Desc_ModularFrameLightweight_C",
+            "amount": 1,
+            "rate": 4.0
+        }
+    ],
+    "machine": "Build_ManufacturerMk1_C",
+    "power_use": 55.0,
+    "recipe_id": "Recipe_Alternate_RadioControlUnit_1_C"
+}
