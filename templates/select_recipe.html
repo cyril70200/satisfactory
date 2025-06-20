@@ -84,7 +84,7 @@
         {% endfor %}
         </div>
         <button type="submit" class="btn btn-primary mt-3">Select Recipe</button>
-        <a href="/" class="btn btn-secondary mt-3 ms-2">Back to Project</a>
+        <a href="{{ url_for('view_project', project_id=project_id) }}" class="btn btn-secondary mt-3 ms-2">Back to Project</a>
     </form>
     </div>
 </body>

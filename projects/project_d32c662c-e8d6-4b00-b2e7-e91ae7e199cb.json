@@ -1,0 +1,195 @@
+{
+  "name": "AluminiumParts",
+  "items": [
+    {
+      "item_id": "Desc_AluminumPlateReinforced_C",
+      "rate": 90.0,
+      "recipe_id": "Recipe_HeatSink_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_AluminumPlate_C",
+          "rate": 480.0,
+          "recipe_id": "Recipe_AluminumSheet_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_AluminumIngot_C",
+              "rate": 480.0,
+              "recipe_id": "Recipe_IngotAluminum_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_AluminumScrap_C",
+                  "rate": 720.0,
+                  "recipe_id": "Recipe_AluminumScrap_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_AluminaSolution_C",
+                      "rate": 480.0,
+                      "recipe_id": "Recipe_Alternate_SloppyAlumina_C",
+                      "outsourced": false,
+                      "ingredients": [
+                        {
+                          "item_id": "Desc_OreBauxite_C",
+                          "rate": 400.0,
+                          "recipe_id": null,
+                          "outsourced": true,
+                          "ingredients": [],
+                          "uuid": "02b91cf227e74ad0bd6c4c16cbf95764",
+                          "extra_rate": 0.0,
+                          "use_extra_rate": false
+                        },
+                        {
+                          "item_id": "Desc_Water_C",
+                          "rate": 400.0,
+                          "recipe_id": null,
+                          "outsourced": true,
+                          "ingredients": [],
+                          "uuid": "6dcb8aab442546418530c7d464b3fd65",
+                          "extra_rate": 0.0,
+                          "use_extra_rate": false
+                        }
+                      ],
+                      "uuid": "d88f16fffac34fa18c9d4e8ec70df6a7",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    },
+                    {
+                      "item_id": "Desc_Coal_C",
+                      "rate": 240.0,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "a903db993b50439a954fbd152de8462c",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "8dfb3fe225ed4a00aaa8f7f8926bfb61",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Silica_C",
+                  "rate": 600.0,
+                  "recipe_id": "Recipe_Silica_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_RawQuartz_C",
+                      "rate": 360.0,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "64b6fe07d4e34538889cbb1f45b83e41",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "bba92a7b9cb740f4959607945685c8f5",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "16c697159d1445d8be5a32be8eadd6ac",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_CopperIngot_C",
+              "rate": 160.0,
+              "recipe_id": "Recipe_Alternate_PureCopperIngot_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_OreCopper_C",
+                  "rate": 64.0,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "ad2b8d21c20b42d8a0bb35541f618243",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Water_C",
+                  "rate": 42.666666666666664,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "77bcacdb6f1f4a0396a9d38fc4c8ddee",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "acc76b3cfd8748f1b6b211cff2513b40",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "fbca3939c34b49bfaa52f2026820af00",
+          "extra_rate": 30.0,
+          "use_extra_rate": true
+        },
+        {
+          "item_id": "Desc_CopperSheet_C",
+          "rate": 270.0,
+          "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_CopperIngot_C",
+              "rate": 270.0,
+              "recipe_id": "Recipe_Alternate_PureCopperIngot_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_OreCopper_C",
+                  "rate": 108.0,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "5facff9924704950b9bbe1dc3b3a5035",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Water_C",
+                  "rate": 72.0,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "4e4ee8a058904f809cb958d1c1c58e25",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "1a24b652bf7e4ab4b1a17d0863202e4c",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Water_C",
+              "rate": 270.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "a73b0215fd43433985ef2896d1a1da01",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "cc760865b4144de5991415478698b2a6",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "eaffbb855b0148f58dffe16e5515716f",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

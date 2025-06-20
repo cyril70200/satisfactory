@@ -1,0 +1,8 @@
+{# modal_base.html - Base template for all modals #}
+<div class="modal fade" id="{{ modal_id }}" tabindex="-1" aria-labelledby="{{ modal_id }}Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 420px; width: 100vw; margin: 0 auto;">
+    <div class="modal-content" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+      {% block modal_content %}{% endblock %}
+    </div>
+  </div>
+</div>

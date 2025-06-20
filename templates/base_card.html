@@ -1,0 +1,19 @@
+<!-- base_card.html: Base card layout for all card types -->
+<div class="card mb-3 shadow-sm {{ card_type }}-card">
+    <div class="card-header {{ header_class }} d-flex justify-content-between align-items-center">
+        <div class="fw-bold d-flex align-items-center" style="margin-right: 1.5em;">
+            {% if card_type == 'resource' and resource_names and card.item_id in resource_names %}
+                {{ resource_names[card.item_id] }}
+            {% else %}
+                {% if card_type == 'recipe' and not is_root %}
+                    <button class="btn btn-xs btn-outline-secondary add-extra-product-btn me-1 header-extra-btn" title="Add as extra product" data-item-uuid="{{ card.uuid }}" data-product-name="{{ card.name }}">+</button>
+                {% endif %}
+                {{ card.name }}
+            {% endif %}
+        </div>
+        <div class="small">{{ card.rate|round(2) }}/min</div>
+    </div>
+    <div class="card-body">
+        {% block card_body %}{% endblock %}
+    </div>
+</div>

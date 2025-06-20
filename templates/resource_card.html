@@ -1,0 +1,9 @@
+{% extends "base_card.html" %}
+{% set card_type = 'resource' %}
+{% set header_class = 'bg-success text-white' %}
+{% block card_body %}
+    <div class="text-center">
+        <span class="fw-bold">{{ resource_names[card.item_id] if card.item_id in resource_names else card.name }}</span>
+        <div class="text-muted">This is a raw resource.</div>
+    </div>
+{% endblock %}

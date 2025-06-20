@@ -1,114 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Select Item</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <script>
-    function filterItems() {
-        var input = document.getElementById('searchBox').value.toLowerCase();
-        var select = document.getElementById('item');
-        for (var i = 0; i < select.options.length; i++) {
-            var option = select.options[i];
-            var text = option.text.toLowerCase();
-            if (text.includes(input)) {
-                option.style.display = '';
-            } else {
-                option.style.display = 'none';
-            }
-        }
-        // If nothing matches, clear selection
-        var anyVisible = false;
-        for (var i = 0; i < select.options.length; i++) {
-            if (select.options[i].style.display !== 'none') {
-                select.selectedIndex = i;
-                anyVisible = true;
-                break;
-            }
-        }
-        if (!anyVisible) {
-            select.selectedIndex = -1;
-        }
-    }
-    </script>
-</head>
-<body>
-    {% extends "layout.html" %}
-    {% import "card.html" as card_macros %}
-    {% block content %}
-    <div class="row align-items-center g-2 mb-1" style="margin-top:8px;">
-      <div class="col-auto fw-bold" style="font-size:1.1em;">Calculator:</div>
-      <div class="col">
-        <input type="text" id="calc-input" class="form-control" placeholder="Type an operation, e.g. (240+120)*12/3" onkeydown="if(event.key==='Enter'){calculateExpression();}">
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-primary" onclick="calculateExpression()">Calc</button>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <div id="calc-result" class="fw-bold text-primary" style="font-size:1.1em;"></div>
-      </div>
-    </div>
-    <div class="container-fluid my-4">
-      <div class="row">
-        <!-- Main card tree column: show all item trees if any -->
-        <div class="col-12">
-          {% if project_items %}
-            <div class="row">
-              {% for item in project_items %}
-                <div class="col-md-12 mb-4">
-                  <h5 class="mb-2">
-                    <span class="{{ 'text-secondary' if item.card and item.card.outsource else '' }}">{{ item.name }}</span>
-                    <span class="badge bg-primary">{{ item.rate }}/min</span>
-                    {% if not item.has_recipe %}
-                      <a href="{{ url_for('select_recipe', item_id=item.item) }}" class="btn btn-sm btn-outline-primary ms-2">Select Recipe</a>
-                    {% endif %}
-                  </h5>
-                  {% if item.card %}
-                    {% if item.card.outsource %}
-                      {{ card_macros.outsource_card(item.card, get_machine_name=get_machine_name, recipes=recipes) }}
-                    {% else %}
-                      {{ card_macros.render_card(item.card, True, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
-                    {% endif %}
-                  {% else %}
-                    <div class="alert alert-info">No recipe selected for this item yet.</div>
-                  {% endif %}
-                </div>
-              {% endfor %}
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+  <div class="row">
+    <!-- Main cards area -->
+    <div class="col-lg-9 col-md-9 col-12">
+      <div class="row g-3">
+        {% if project_items %}
+          {% for item in project_items %}
+            <div class="col-auto">
+              {% if item.recipe_id %}
+                {% with card=item, project_root=project_id, is_root=True %}
+                  {% include 'recipe_card.html' %}
+                {% endwith %}
+              {% elif item.item_id in resource_ids %}
+                {% with card=item, project_root=project_id %}
+                  {% include 'resource_card.html' %}
+                {% endwith %}
+              {% elif item.outsourced %}
+                {% with card=item, project_root=project_id %}
+                  {% include 'outsourced_card.html' %}
+                {% endwith %}
+              {% else %}
+                {% with card=item, project_root=project_id %}
+                  {% include 'outsourced_card.html' %}
+                {% endwith %}
+              {% endif %}
             </div>
-          {% else %}
+          {% endfor %}
+        {% else %}
+          <div class="col-12">
             <div class="alert alert-secondary text-center">No items in this project yet. Use the left bar to add items.</div>
-          {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <!-- Production report sidebar -->
+    <div class="col-lg-3 col-md-4 col-12">
+      <div class="card production-report-card mb-3" style="max-width: 340px; min-width: 240px;">
+        <div class="card-header bg-info text-white fw-bold">Production Report</div>
+        <div class="card-body">
+          <!-- Section 1: Power and machines -->
+          <div class="mb-3">
+            <div class="fw-bold mb-2">Total Power Used:</div>
+            <div class="h5 text-danger mb-2">{{ total_power|round(2) }} MW</div>
+            {% if machines %}
+              <div class="fw-bold mb-2">Machines:</div>
+              <ul class="list-group mb-2">
+                {% for mname, m in machines.items() %}
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                    <span class="badge bg-secondary me-2">{{ m.count|round(2) }} ×</span>
+                    <span class="flex-grow-1" style="min-width:0;">{{ mname }}</span>
+                    <span class="badge bg-warning text-dark ms-2">{{ m.power|round(2) }} MW</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+          <!-- Section 2: Item summary -->
+          <div>
+            <div class="fw-bold mb-2">Item Summary:</div>
+            <ul class="list-group">
+              {% for key, item in item_report.items() %}
+                {% set color =
+                  'bg-danger text-white' if item.type == 'project' else
+                  'bg-light text-dark' if item.type == 'intermediate' else
+                  'bg-warning text-dark' if item.type == 'byproduct' else
+                  'bg-secondary text-white' if item.type == 'outsourced' else
+                  'bg-success text-white' if item.type == 'resource' else
+                  'bg-light text-dark' %}
+                <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                  <span class="fw-bold">{{ item.name }}</span>
+                  <span class="badge {{ color }}">{{ item.rate|round(2) }}/min</span>
+                </li>
+              {% endfor %}
+            </ul>
+            <div class="mt-2 small">
+              <span class="badge bg-danger">Project</span>
+              <span class="badge bg-light text-dark border">Intermediate</span>
+              <span class="badge bg-warning text-dark">Byproduct</span>
+              <span class="badge bg-secondary">Outsourced</span>
+              <span class="badge bg-success">Resource</span>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Right-side summary is now in layout.html -->
     </div>
-    {% endblock %}
+  </div>
+</div>
+{% endblock %}
 
-    {% block scripts %}
-    <script>
-    function calculateExpression() {
-      const input = document.getElementById('calc-input').value;
-      const resultDiv = document.getElementById('calc-result');
-      if (!input.trim()) {
-        resultDiv.textContent = '';
-        return;
-      }
-      try {
-        // Only allow numbers, operators, parentheses, decimal points, and spaces
-        if (/^[0-9+\-*/().\s]+$/.test(input)) {
-          // eslint-disable-next-line no-eval
-          const result = eval(input);
-          resultDiv.textContent = '= ' + result;
-        } else {
-          resultDiv.textContent = 'Invalid characters';
-        }
-      } catch (e) {
-        resultDiv.textContent = 'Error';
-      }
-    }
-    </script>
-    {% endblock %}
-</body>
-</html>
+{% block modals %}
+  {% with modal_id='renameProjectModal' %}
+    {% include 'modal_rename_project.html' %}
+  {% endwith %}
+  {% with modal_id='addItemModal' %}
+    {% include 'modal_add_item.html' %}
+  {% endwith %}
+  {% with modal_id='openProjectModal' %}
+    {% include 'modal_open_project.html' %}
+  {% endwith %}
+  {% with modal_id='newProjectModal' %}
+    {% include 'modal_new_project.html' %}
+  {% endwith %}
+  {% with modal_id='changeRateModal' %}
+    {% include 'modal_change_rate.html' %}
+  {% endwith %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="/static/rename_project_modal.js"></script>
+  <script src="/static/new_project_modal.js"></script>
+  <script src="/static/open_project_modal.js"></script>
+  <script src="/static/add_item_modal.js"></script>
+  <script src="/static/change_rate_modal.js"></script>
+  {# Add other modal JS files as needed #}
+{% endblock %}

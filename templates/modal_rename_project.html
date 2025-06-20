@@ -1,0 +1,28 @@
+{% extends 'modal_base.html' %}
+{% set modal_id = "renameProjectModal" %}
+{% block modal_content %}
+<div class="modal-header">
+  <h5 class="modal-title">Rename Project</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="container-fluid px-3 py-2">
+  {% if project_id %}
+  <form id="renameProjectForm" method="post" action="{{ url_for('rename_project', project_id=project_id) }}" style="width:100%;max-width:100%;">
+    <div class="row mb-3">
+      <label for="projectNameInput" class="col-form-label col-12">Project Name</label>
+      <div class="col-12">
+        <input type="text" class="form-control" id="projectNameInput" name="new_name" value="" required maxlength="64" autocomplete="off">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-end gap-2">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="renameProjectSubmit" disabled>Rename</button>
+      </div>
+    </div>
+  </form>
+  {% else %}
+    <div class="alert alert-warning">No project selected.</div>
+  {% endif %}
+</div>
+{% endblock %}

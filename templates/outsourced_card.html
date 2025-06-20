@@ -1,0 +1,9 @@
+{% extends "base_card.html" %}
+{% set card_type = 'outsourced' %}
+{% set header_class = 'bg-secondary text-white' %}
+{% block card_body %}
+    <div class="text-center">
+        <span class="fw-bold">This item is outsourced.</span><br>
+        <a href="{{ url_for('select_recipe', project_id=project_root, item_uuid=card.uuid) }}" class="btn btn-sm btn-outline-primary mt-2">Select Recipe</a>
+    </div>
+{% endblock %}

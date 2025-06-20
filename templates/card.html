@@ -95,78 +95,8 @@
           <div class="row">
             {% for item in project_items %}
               <div class="col-md-12 mb-4">
-                <h5 class="mb-2">{{ item.name }} <span class="badge bg-primary">{{ item.rate }}/min</span></h5>
-                {% if item.card %}
-                  {% if item.card.outsource %}
-                    <div class="card mb-3 shadow-sm">
-                        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
-                            <div class="fw-bold">{{ item.card.name }}</div>
-                            <div class="small">{{ item.card.rate|round(2) }}/min</div>
-                        </div>
-                    </div>
-                  {% else %}
-                    {{ render_card(item.card, True, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
-                    <!-- Modal for normal cards -->
-                    <div class="modal fade" id="recipeInfoModal-{{ item.card.recipe_id }}" tabindex="-1" aria-labelledby="recipeInfoModalLabel-{{ item.card.recipe_id }}" aria-hidden="true">
-                      <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content" style="background:#333;color:#fff;">
-                          <div class="modal-header" style="border-bottom:1px solid #444;">
-                            <h5 class="modal-title" id="recipeInfoModalLabel-{{ item.card.recipe_id }}">{{ item.card.recipe_name }}</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="row mb-3 text-center">
-                              <div class="col-md-4">
-                                <div class="fw-bold text-secondary">Produced in</div>
-                                <div class="text-warning" style="font-size:1.1em;">{{ get_machine_name(item.card.machine_id) }}</div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="fw-bold text-secondary">Production Rate</div>
-                                <div class="text-warning" style="font-size:1.1em;">
-                                  {% set main_prod = item.card.recipe.products|selectattr('item', 'equalto', item.card.item)|first %}
-                                  {{ main_prod.rate|round(2) if main_prod else '?' }}/min
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="fw-bold text-secondary">Cycle Time</div>
-                                <div class="text-info" style="font-size:1.1em;">{{ item.card.recipe.time|round(2) if item.card.recipe and item.card.recipe.time else '?' }} sec</div>
-                              </div>
-                            </div>
-                            <div class="row mb-2">
-                              <div class="col-md-6">
-                                <div class="fw-bold mb-1">Ingredients:</div>
-                                <ul class="list-group list-group-flush">
-                                  {% for ing in item.card.recipe.ingredients %}
-                                  {% set ing_card = item.card.ingredients|selectattr('item', 'equalto', ing.item)|first %}
-                                  <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
-                                    <span>{{ get_item_name(ing.item, recipes) }}</span>
-                                    <span class="fw-bold">{{ ing.amount }}/cycle</span>
-                                    <span class="text-info small ms-2">{{ ing_card.rate|round(2) if ing_card else '?' }}/min</span>
-                                  </li>
-                                  {% endfor %}
-                                </ul>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="fw-bold mb-1">Products:</div>
-                                <ul class="list-group list-group-flush">
-                                  {% for prod in item.card.recipe.products %}
-                                  <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
-                                    <span>{{ get_item_name(prod.item, recipes) }}</span>
-                                    <span class="fw-bold">{{ prod.amount }}/cycle</span>
-                                    <span class="text-info small ms-2">{{ prod.rate|round(2) }}/min</span>
-                                  </li>
-                                  {% endfor %}
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  {% endif %}
-                {% else %}
-                  <div class="alert alert-info">No recipe selected for this item yet.</div>
-                {% endif %}
+                {% set root_product_id = item.item %}
+                {{ render_card(item.card, root_product_id, True, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
               </div>
             {% endfor %}
           </div>
@@ -182,7 +112,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-{% macro render_card(card, is_root=False, show_header=False, recipes=None, get_item_name=None, get_machine_name=None) %}
+{% macro render_card(card, root_product_id=None, is_root=False, show_header=False, recipes=None, get_item_name=None, get_machine_name=None) %}
+    {% set root_product_id = root_product_id or card.item %}
+    {# DEBUG: root_product_id={{ root_product_id }}, card.item={{ card.item }} #}
     {% if card.outsource %}
         {{ outsource_card(card) }}
     {% else %}
@@ -214,73 +146,20 @@
         </div>
         {% endif %}
         <div class="card-body">
-            {% if card.recipe_id %}
             <div class="mb-2 d-flex align-items-center">
-                <span class="recipe-icon me-2" onclick="window.location='{{ url_for('select_recipe', item_id=card.item) }}'" title="Change recipe">
+                <span class="recipe-icon me-2" onclick="window.location='{{ url_for('select_recipe', root_product_id=root_product_id, item_id=card.item) }}'" title="Change recipe">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                     <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.693-1.115l.094-.319z"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c-1.79-.527-1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.693-1.115l.094-.319z"/>
                   </svg>
                 </span>
+                <span style="color:red;font-size:0.9em;">[root_product_id={{ root_product_id }}, card.item={{ card.item }}]</span>
+                {% if card.recipe_id %}
                 <strong>Recipe:</strong>
                 <a href="#" class="ms-2 text-decoration-underline text-info fw-bold" data-bs-toggle="modal" data-bs-target="#recipeInfoModal-{{ card.recipe_id }}">{{ card.recipe_name }}</a>
+                {% endif %}
             </div>
-            <!-- Recipe Info Modal -->
-            <div class="modal fade" id="recipeInfoModal-{{ card.recipe_id }}" tabindex="-1" aria-labelledby="recipeInfoModalLabel-{{ card.recipe_id }}" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content" style="background:#333;color:#fff;">
-                  <div class="modal-header" style="border-bottom:1px solid #444;">
-                    <h5 class="modal-title" id="recipeInfoModalLabel-{{ card.recipe_id }}">{{ card.recipe_name }}</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row mb-3 text-center">
-                      <div class="col-md-4">
-                        <div class="fw-bold text-secondary">Produced in</div>
-                        <div class="text-warning" style="font-size:1.1em;">{{ get_machine_name(card.machine_id) }}</div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="fw-bold text-secondary">Production Rate</div>
-                        <div class="text-warning" style="font-size:1.1em;">
-                          {% set main_prod = card.recipe.products|selectattr('item', 'equalto', card.item)|first %}
-                          {{ main_prod.rate|round(2) if main_prod else '?' }}/min
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="fw-bold text-secondary">Cycle Time</div>
-                        <div class="text-info" style="font-size:1.1em;">{{ card.recipe.time|round(2) if card.recipe and card.recipe.time else '?' }} sec</div>
-                      </div>
-                    </div>
-                    <div class="row mb-2">
-                      <div class="col-md-6">
-                        <div class="fw-bold mb-1">Ingredients:</div>
-                        <ul class="list-group list-group-flush">
-                          {% for ing in card.recipe.ingredients %}
-                          <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
-                            <span>{{ get_item_name(ing.item, recipes) }}</span>
-                            <span class="fw-bold">{{ ing.amount }}/cycle</span>
-                            <span class="text-info small ms-2">{{ ing.rate|round(2) }}/min</span>
-                          </li>
-                          {% endfor %}
-                        </ul>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="fw-bold mb-1">Products:</div>
-                        <ul class="list-group list-group-flush">
-                          {% for prod in card.recipe.products %}
-                          <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
-                            <span>{{ get_item_name(prod.item, recipes) }}</span>
-                            <span class="fw-bold">{{ prod.amount }}/cycle</span>
-                            <span class="text-info small ms-2">{{ prod.rate|round(2) }}/min</span>
-                          </li>
-                          {% endfor %}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% if card.recipe_id %}
             <div class="row g-2 mb-2">
                 <div class="col-md-6"><strong>Machines Needed:</strong><br>{% if card.machines is not none %}{{ card.machines|round(2) }}{% else %}N/A{% endif %} × {{ card.machine_name }}</div>
                 <div class="col-md-6"><strong>Total Power:</strong><br>{% if card.power is not none %}{{ card.power|round(2) }}{% else %}N/A{% endif %} MW</div>
@@ -328,7 +207,7 @@
                                         <div class="card-body text-center py-2">
                                             {% if net_rate != 0 %}
                                                 <span>No recipe selected for this item yet.</span><br>
-                                                <a href="{{ url_for('select_recipe', item_id=ing.child_card.item) }}" class="small">Select a recipe</a>
+                                                <a href="{{ url_for('select_recipe', root_product_id=root_product_id, item_id=ing.child_card.item) }}" class="small">Select a recipe</a>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -336,7 +215,7 @@
                                     {% if ing.child_card.outsource %}
                                         {{ outsource_card(ing.child_card, get_machine_name=get_machine_name, recipes=recipes) }}
                                     {% else %}
-                                        {{ render_card(ing.child_card, False, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
+                                        {{ render_card(ing.child_card, root_product_id, False, True, recipes=recipes, get_item_name=get_item_name, get_machine_name=get_machine_name) }}
                                     {% endif %}
                                 {% endif %}
                             {% else %}
@@ -350,7 +229,7 @@
                                     <div class="card-body text-center py-2">
                                         {% if net_rate != 0 %}
                                             <span>No recipe selected for this item yet.</span><br>
-                                            <a href="{{ url_for('select_recipe', item_id=ing.item) }}" class="small">Select a recipe</a>
+                                            <a href="{{ url_for('select_recipe', root_product_id=root_product_id, item_id=ing.item) }}" class="small">Select a recipe</a>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -360,7 +239,7 @@
                 {% endfor %}
             </div>
             {% else %}
-            <p class="text-muted"><em>No recipe selected for this item yet. <a href="{{ url_for('select_recipe', item_id=card.item) }}">Select a recipe</a></em></p>
+            <p class="text-muted"><em>No recipe selected for this item yet. <a href="{{ url_for('select_recipe', root_product_id=root_product_id, item_id=card.item) }}">Select a recipe</a></em></p>
             {% endif %}
         </div>
         {% if is_root %}
@@ -398,10 +277,10 @@
         <div class="card-body">
             {% if card.recipe_id %}
             <div class="mb-2 d-flex align-items-center">
-                <span class="recipe-icon me-2" onclick="window.location='{{ url_for('select_recipe', item_id=card.item) }}'" title="Change recipe">
+                <span class="recipe-icon me-2" onclick="window.location='{{ url_for('select_recipe', root_product_id=root_product_id, item_id=card.item) }}'" title="Change recipe">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                     <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.693-1.115l.094-.319z"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c-1.79-.527-1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.04 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.693-1.115l.094-.319z"/>
                   </svg>
                 </span>
                 <strong>Recipe:</strong>

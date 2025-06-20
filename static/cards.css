@@ -1,0 +1,199 @@
+/* cards.css - Styles for all card types in the Satisfactory planner */
+.card {
+    border-radius: 0.5rem !important;
+    box-shadow: 8px 10px 15px rgba(100,100,100,0.8) !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+.card-header {
+    border-bottom: 1px solid #eee;
+    background: #f8f9fa;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.ingredient-body{
+    padding: 0.2em;
+    background: #fff;
+}
+.card-body {
+    padding: 0.4em 0.4em;
+    /* background: #fff; removed to avoid breaking border-radius */
+}
+.resource-card {
+    border: 1px solid #ddd;
+    overflow: hidden;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.resource-card-header {
+    background-color: #198754;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.byproduct-pill {
+    display: inline-block;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+.byproduct-used-pill {
+    display: inline-block;
+    background-color: #198754;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+.byproduct-label {
+    margin-bottom: 0.2rem;
+}
+.summary-card {
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.summary-card .card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-align: center;
+}
+.summary-pill {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+    text-align: center;
+    width: 100%;
+}
+.summary-resource-pill {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+.summary-byproduct-pill {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+.summary-machine-pill {
+    background-color: #fff3cd;
+    color: #856404;
+}
+.recipe-icon {
+    cursor: pointer;
+    margin-right: 0.5em;
+    color: #0d6efd;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+.recipe-icon:hover {
+    color: #0a58ca;
+}
+.byproduct-bar {
+    background: #fffbe6;
+    color: #856404;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.98em;
+    font-weight: 500;
+    border-left: 4px solid #ffe066;
+    border-right: 4px solid #ffe066;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.extra-product-bar {
+    background: #f3e6ff;
+    color: #6f42c1;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.98em;
+    font-weight: 500;
+    border-left: 4px solid #d6b3ff;
+    border-right: 4px solid #d6b3ff;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.extra-product-pill {
+    background: #e0c3fc;
+    color: #6f42c1;
+    border-radius: 1.5rem;
+    padding: 0.2rem 0.7rem;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5em;
+}
+.extra-product-rate-input {
+    width: 70px;
+    margin-right: 0.3em;
+    border: 1px solid #b197fc;
+    background: #f8f6ff;
+    color: #6f42c1;
+}
+.add-extra-product-btn {
+    font-size: 1.1em;
+    color: #6f42c1;
+    background: #f3e6ff;
+    border: 1px solid #d6b3ff;
+    border-radius: 50%;
+    width: 1.7em;
+    height: 1.7em;
+    line-height: 1.2em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+.add-extra-product-btn:hover {
+    background: #e0c3fc;
+    color: #fff;
+    border-color: #b197fc;
+}
+.remove-extra-product-btn {
+    font-size: 1.1em;
+    color: #fff;
+    background: #c1121f;
+    border: none;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.1em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove-extra-product-btn:hover {
+    background: #a60d1a;
+}
+.header-extra-btn {
+    font-size: 0.85em;
+    width: 1.3em;
+    height: 1.3em;
+    min-width: 1.3em;
+    min-height: 1.3em;
+    padding: 0;
+    margin-right: 0.4em !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    background: #f3e6ff;
+    color: #6f42c1;
+    border: 1px solid #d6b3ff;
+    border-radius: 50%;
+}
+.header-extra-btn:hover {
+    background: #e0c3fc;
+    color: #fff;
+    border-color: #b197fc;
+}

@@ -1,0 +1,26 @@
+{% extends 'modal_base.html' %}
+{% set modal_id = "addItemModal" %}
+{% block modal_content %}
+<div class="modal-header">
+  <h5 class="modal-title" id="addItemModalLabel">Add Item to Project</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+  <form method="post" action="/project/{{ project_id }}/add_item" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+    <label for="itemSearchBox" class="form-label">Search Item</label>
+    <input type="text" class="form-control mb-2" id="itemSearchBox" placeholder="Type to search..." onkeyup="filterAddItemOptions()" style="max-width:100%; width:100%;">
+    <label for="itemSelect" class="form-label">Item</label>
+    <select class="form-select" id="itemSelect" name="item" required style="max-width:100%; width:100%;">
+      {% for item_id, name in items.items() %}
+        <option value="{{ item_id }}">{{ name }}</option>
+      {% endfor %}
+    </select>
+    <label for="itemRate" class="form-label mt-2">Rate (per minute)</label>
+    <input type="number" class="form-control" id="itemRate" name="rate" min="0.01" step="any" required style="max-width:100%; width:100%;">
+    <div class="modal-footer" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      <button type="submit" class="btn btn-primary">Add Item</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

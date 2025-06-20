@@ -1,0 +1,23 @@
+/* navbar.css - Custom styles for the sidebar navbar */
+.sidebar-nav {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+  border-right: 1px solid #e5e5e5;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+  background: #f8f9fa;
+}
+.sidebar-nav .navbar-brand {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1.3em;
+}
+.sidebar-nav .btn {
+  margin-bottom: 0.5em;
+}
+.sidebar-nav .btn:last-child {
+  margin-bottom: 0;
+}

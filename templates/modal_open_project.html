@@ -1,0 +1,51 @@
+{% extends 'modal_base.html' %}
+{% block modal_content %}
+  <div class="modal-header">
+    <h5 class="modal-title">Open Project</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="container-fluid px-3 py-2">
+    <form id="openProjectForm" method="get" action="" style="width:100%;max-width:100%;">
+      <div class="row mb-3">
+        <label for="projectSearchBox" class="col-form-label col-12">Search Projects</label>
+        <div class="col-12 mb-2">
+          <input type="text" class="form-control" id="projectSearchBox" placeholder="Type to filter projects..." autocomplete="off">
+        </div>
+        <div class="col-12">
+          <ul class="list-group" id="projectList">
+            {% for project in projects %}
+              <li class="list-group-item d-flex justify-content-between align-items-center project-list-item" data-name="{{ project.name|lower }}" data-id="{{ project.id }}">
+                <span>{{ project.name }}</span>
+                <button type="button" class="btn btn-sm btn-primary open-project-btn" data-id="{{ project.id }}">Open</button>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <input type="hidden" name="project_id" id="selectedProjectId">
+    </form>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var searchBox = document.getElementById('projectSearchBox');
+      var projectList = document.getElementById('projectList');
+      if (searchBox && projectList) {
+        searchBox.addEventListener('input', function() {
+          var filter = searchBox.value.trim().toLowerCase();
+          Array.from(projectList.children).forEach(function(li) {
+            var name = (li.getAttribute('data-name') || '').trim().toLowerCase();
+            li.style.display = name.includes(filter) ? '' : 'none';
+          });
+        });
+      }
+      projectList.addEventListener('click', function(e) {
+        if (e.target.classList.contains('open-project-btn')) {
+          var projectId = e.target.getAttribute('data-id');
+          if (projectId) {
+            window.location.href = '/project/' + encodeURIComponent(projectId);
+          }
+        }
+      });
+    });
+  </script>
+{% endblock %}
