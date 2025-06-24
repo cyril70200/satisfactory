@@ -1,0 +1,58 @@
+{
+  "name": "SteelBeam",
+  "items": [
+    {
+      "item_id": "Desc_SteelPlate_C",
+      "rate": 67.5,
+      "recipe_id": "Recipe_Alternate_SteelBeam_Molded_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_SteelIngot_C",
+          "rate": 180.0,
+          "recipe_id": "Recipe_Alternate_IngotSteel_1_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_IronIngot_C",
+              "rate": 120.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "dc7b73700a994ef6858deb1446436507",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Coal_C",
+              "rate": 120.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "6546d5aa1c6f4330b2cbd0c0004b6b7b",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "cc6dd6a30f6a430c9ef4e23315bec40d",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Cement_C",
+          "rate": 120.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "f1dadac618804f499a13121e1e1f5fb1",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "b5f79cb25e2d4144ad816a76c09e394d",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

@@ -240,6 +240,7 @@ def index():
     items = Item.all_items()
     return render_template(
         'index.html',
+        item_report={},
         project=None,
         project_items=None,
         project_name=None,
@@ -369,6 +370,23 @@ def select_recipe(project_id, item_uuid):
         get_recipe_name=get_recipe_name,
         get_machine_name=get_machine_name
     )
+
+@app.route('/project/<project_id>/delete', methods=['POST'])
+def delete_project(project_id):
+    """Delete the project file and remove from cache, then redirect to home."""
+    # Remove from cache if present
+    project_cache.pop(project_id, None)
+    # Delete the file
+    project_path = get_project_path(project_id)
+    try:
+        if os.path.exists(project_path):
+            os.remove(project_path)
+            flash('Project deleted.', 'success')
+        else:
+            flash('Project file not found.', 'error')
+    except Exception as e:
+        flash(f'Error deleting project: {e}', 'error')
+    return redirect(url_for('index'))
 
 # Helper to find parent of an item by uuid
 

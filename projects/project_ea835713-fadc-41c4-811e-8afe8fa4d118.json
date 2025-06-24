@@ -1,0 +1,90 @@
+{
+  "name": "PlasticRubber",
+  "items": [
+    {
+      "item_id": "Desc_Rubber_C",
+      "rate": 40.0,
+      "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_Plastic_C",
+          "rate": 40.0,
+          "recipe_id": "Recipe_Alternate_Plastic_1_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_Rubber_C",
+              "rate": 20.0,
+              "recipe_id": "Recipe_Rubber_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_LiquidOil_C",
+                  "rate": 30.0,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "1a794f17e09e4bc8ab9a82660f1b9c5f",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "d5c6453337344f2ba751ae7f1789c2da",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_LiquidFuel_C",
+              "rate": 40.0,
+              "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_HeavyOilResidue_C",
+                  "rate": 20.0,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "d104766ccc4841c2864ec78f6f113ce3",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Water_C",
+                  "rate": 40.0,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "c31a95679ff249c988be8fc6d18366a1",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "bf50597d5a494c5280e762c7bb7fe8fd",
+              "extra_rate": 20.0,
+              "use_extra_rate": true
+            }
+          ],
+          "uuid": "bb97f408a8734b7fbcd630e854a94017",
+          "extra_rate": 20.0,
+          "use_extra_rate": true
+        },
+        {
+          "item_id": "Desc_LiquidFuel_C",
+          "rate": 20.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "8cc3763d1bc2430096b5967b71ab6544",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "c35d8273c48346a097fd6abe1dc5a483",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

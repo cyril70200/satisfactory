@@ -1,0 +1,57 @@
+{
+  "name": "HeavyFrame",
+  "items": [
+    {
+      "item_id": "Desc_ModularFrameHeavy_C",
+      "rate": 8.4375,
+      "recipe_id": "Recipe_Alternate_ModularFrameHeavy_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_ModularFrame_C",
+          "rate": 22.504000711237556,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "a6fe2f44bce04734b97b62263a685e19",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_SteelPlateReinforced_C",
+          "rate": 28.130000889046944,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "cc389b9c51894d58ac196182d73563d3",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_SteelPipe_C",
+          "rate": 101.268003200569,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "b48585f146664875a95d0e317dc0b110",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Cement_C",
+          "rate": 61.886001955903275,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "8b671ad551d34624b503371af471905c",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "cf3093fb29074bd8acaa32cd8f6c631a",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

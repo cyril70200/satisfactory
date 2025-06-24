@@ -1,0 +1,37 @@
+{
+  "name": "SteelIngot",
+  "items": [
+    {
+      "item_id": "Desc_SteelIngot_C",
+      "rate": 240.0,
+      "recipe_id": "Recipe_Alternate_IngotSteel_1_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_IronIngot_C",
+          "rate": 160.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "9256eee538b44fae8d581bddfe54fc4a",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Coal_C",
+          "rate": 160.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "a0c2720808784d3686aedc5bbe1b7670",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "450ecaeb1670497ba253965679359140",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

@@ -1,0 +1,37 @@
+{
+  "name": "HeatSink",
+  "items": [
+    {
+      "item_id": "Desc_AluminumPlateReinforced_C",
+      "rate": 30.0,
+      "recipe_id": "Recipe_Alternate_HeatSink_1_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_AluminumCasing_C",
+          "rate": 90.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "f0966a1db02c40398b62fad8bf9059e5",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Rubber_C",
+          "rate": 90.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "ba35909f4dcb43dca7094374f2dfc664",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "82f4977efff0407e99baa56c0a759912",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

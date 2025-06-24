@@ -1,0 +1,193 @@
+{
+  "name": "PlasticRubberAluminiumSite",
+  "items": [
+    {
+      "item_id": "Desc_Plastic_C",
+      "rate": 480.0,
+      "recipe_id": "Recipe_Alternate_Plastic_1_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_Rubber_C",
+          "rate": 240.0,
+          "recipe_id": "Recipe_Rubber_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_LiquidOil_C",
+              "rate": 360.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "1df69986d0064a44afc402ac18c86136",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "47ac1193b5044850a070939734f89fe0",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_LiquidFuel_C",
+          "rate": 240.0,
+          "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_HeavyOilResidue_C",
+              "rate": 120.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "49e737990e244b73a9a53b4acb94e7e1",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Water_C",
+              "rate": 240.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "db8b61063736445e87ff2f75c17b5fd8",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "02dfd2f55edb423090f2d1347a56630c",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "0e9167474e804ad0a12912e76381f4e7",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    },
+    {
+      "item_id": "Desc_Rubber_C",
+      "rate": 360.0,
+      "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_Plastic_C",
+          "rate": 180.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "6f106c98e4694c9aa1f45759067d918e",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_LiquidFuel_C",
+          "rate": 180.0,
+          "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_HeavyOilResidue_C",
+              "rate": 90.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "a6e49fdc809342dfb78a256140d13de9",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Water_C",
+              "rate": 180.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "da274f3d0de846709ef36e5e9a3350a2",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "66d9c15aed8e4d4c87c5c7ce25006a7b",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "9b13959878f14395b5ca97f389f7cbf6",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    },
+    {
+      "item_id": "Desc_RocketFuel_C",
+      "rate": 90.0,
+      "recipe_id": "Recipe_Alternate_RocketFuel_Nitro_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_LiquidFuel_C",
+          "rate": 60.0,
+          "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_HeavyOilResidue_C",
+              "rate": 30.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "85663b04590b46c8bb896b4ac604ceb3",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Water_C",
+              "rate": 60.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "ef2a4c11bc504f6c8050e97efd167ec2",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "b6e98b83c781439b8110367c3dfded79",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_NitrogenGas_C",
+          "rate": 45.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "68f1592d7ba740259985e52289171a0c",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Sulfur_C",
+          "rate": 60.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "c547d8029c7c4c6597d46ff8872b394c",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Coal_C",
+          "rate": 30.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "fc350cee173c47aba924a9c216e8ed66",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "e72c48bdb041460587ac9e4ba804b3c8",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

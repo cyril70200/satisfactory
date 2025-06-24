@@ -1,0 +1,48 @@
+{
+  "name": "Frame",
+  "items": [
+    {
+      "item_id": "Desc_ModularFrame_C",
+      "rate": 3.333,
+      "recipe_id": "Recipe_ModularFrame_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_IronPlateReinforced_C",
+          "rate": 4.9995,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "e9bf6a1cc5614caebb6d0097bf61192e",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_IronRod_C",
+          "rate": 19.998,
+          "recipe_id": "Recipe_IronRod_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_IronIngot_C",
+              "rate": 19.998,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "d65bc20e54b34dd18e906386e46b8363",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "fc69e0d3fb39455989bf883c70220de8",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "6577cc17e6ae4f44b9096aa0f2883d7f",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

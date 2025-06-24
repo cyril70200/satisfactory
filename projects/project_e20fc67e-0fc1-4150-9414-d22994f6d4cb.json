@@ -1,0 +1,175 @@
+{
+  "name": "Computer",
+  "items": [
+    {
+      "item_id": "Desc_Computer_C",
+      "rate": 6.666,
+      "recipe_id": "Recipe_Alternate_Computer_2_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_CircuitBoard_C",
+          "rate": 10.0,
+          "recipe_id": "Recipe_Alternate_CircuitBoard_1_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_CopperSheet_C",
+              "rate": 38.67,
+              "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_CopperIngot_C",
+                  "rate": 38.67,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "45ebb527bea14794a72062377590c917",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Water_C",
+                  "rate": 38.67,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "74655d3b6ebe465e8f840cae3dda74af",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "1956a9ad2b7d4e4cbca3f0bce80f2eb9",
+              "extra_rate": 16.67,
+              "use_extra_rate": true
+            },
+            {
+              "item_id": "Desc_Silica_C",
+              "rate": 22.0,
+              "recipe_id": "Recipe_Silica_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_RawQuartz_C",
+                  "rate": 13.2,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "7082c071dc7a49fc97302a51faf46c03",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "f7cf512bb06941058ae6f3eab6591e23",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "99376ec955134d33a9821f17b5cc58a5",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_CrystalOscillator_C",
+          "rate": 3.334,
+          "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_QuartzCrystal_C",
+              "rate": 33.34,
+              "recipe_id": "Recipe_QuartzCrystal_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_RawQuartz_C",
+                  "rate": 55.56666666666668,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "6480ea442e6e478ca88f7e104c00a5ee",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "5f6bc4a5987b445c8aedd5569fd25737",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Rubber_C",
+              "rate": 23.338,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "db7c8b43536e460ab840b73a072e2604",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_CircuitBoardHighSpeed_C",
+              "rate": 3.334,
+              "recipe_id": "Recipe_AILimiter_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_CopperSheet_C",
+                  "rate": 16.67,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "4c41b57add354ec69a9210429fc06037",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_HighSpeedWire_C",
+                  "rate": 66.68,
+                  "recipe_id": "Recipe_Quickwire_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_GoldIngot_C",
+                      "rate": 13.336000000000002,
+                      "recipe_id": "Recipe_IngotCaterium_C",
+                      "outsourced": false,
+                      "ingredients": [
+                        {
+                          "item_id": "Desc_OreGold_C",
+                          "rate": 40.008,
+                          "recipe_id": null,
+                          "outsourced": true,
+                          "ingredients": [],
+                          "uuid": "c2ca705ee4434b1bad9a262b9bfb30d6",
+                          "extra_rate": 0.0,
+                          "use_extra_rate": false
+                        }
+                      ],
+                      "uuid": "4e983d14e22745efac7772e0994464fe",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "b4114acc4d9747469d32414e8b4eab65",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "c1d1f13e1aa04874805c21817189a9ff",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "14c28b1174f94693afbb91e678ae278b",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "333dbfb946b54a87b15ff74e5012e55d",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

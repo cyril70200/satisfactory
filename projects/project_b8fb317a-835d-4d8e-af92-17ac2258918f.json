@@ -1,0 +1,37 @@
+{
+  "name": "IronIngot",
+  "items": [
+    {
+      "item_id": "Desc_IronIngot_C",
+      "rate": 1950.0,
+      "recipe_id": "Recipe_Alternate_PureIronIngot_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_OreIron_C",
+          "rate": 1050.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "b9c47ba431294c7d82449a3cd06062ea",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Water_C",
+          "rate": 600.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "a4b200cba7af4a1995f7bacd115829bd",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "3f7785449f8b46d1b659ef660a924915",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

@@ -1,0 +1,173 @@
+{
+  "name": "RadioControl",
+  "items": [
+    {
+      "item_id": "Desc_ModularFrameLightweight_C",
+      "rate": 16.0,
+      "recipe_id": "Recipe_Alternate_RadioControlSystem_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_CrystalOscillator_C",
+          "rate": 5.333333333333333,
+          "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_QuartzCrystal_C",
+              "rate": 53.33333333333333,
+              "recipe_id": "Recipe_QuartzCrystal_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_RawQuartz_C",
+                  "rate": 88.88888888888889,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "d34bdcd03c794403bb713f7558e55232",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "a7a1d8e8f3d04e049cb142a251d34ce0",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Rubber_C",
+              "rate": 37.33333333333333,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "066f930a9a914855a47ccfef1922adc0",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_CircuitBoardHighSpeed_C",
+              "rate": 5.333333333333333,
+              "recipe_id": "Recipe_Alternate_AILimiter_Plastic_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_HighSpeedWire_C",
+                  "rate": 80.0,
+                  "recipe_id": "Recipe_Quickwire_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_GoldIngot_C",
+                      "rate": 16.0,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "c4b8afe5f60543039739cd7abea6518d",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "04edb7966ad246bd9018685e99d4b2cf",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Plastic_C",
+                  "rate": 18.666666666666664,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "35ac54f415174af2ad5b7e6d50254502",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "02074b166cff4fdfbb592dc53c71c837",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "b7963874496443b98584bc50caa0149e",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_CircuitBoard_C",
+          "rate": 53.333333333333336,
+          "recipe_id": "Recipe_CircuitBoard_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_CopperSheet_C",
+              "rate": 106.66666666666667,
+              "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_CopperIngot_C",
+                  "rate": 106.66666666666669,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "9fb1e9e9c061487c8a0dcdc5d85ccbee",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Water_C",
+                  "rate": 106.66666666666669,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "abff2c7030524000bc84cf81fc1b66ef",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "38e1c0bfa36c4fecb1c86da05ec79622",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Plastic_C",
+              "rate": 213.33333333333334,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "9db195369f03454786ed5be972579c20",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "b819c2f24f2149c1befa6f8f9407b173",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_AluminumCasing_C",
+          "rate": 320.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "aae6ddea296646b08b2d301ab0525408",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Rubber_C",
+          "rate": 160.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "4ee9b11e0e124db39560df717f651a32",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "e9b2ee98fcd243b6861cfa9a04fef984",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

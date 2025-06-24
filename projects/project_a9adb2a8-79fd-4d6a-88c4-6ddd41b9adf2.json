@@ -1,0 +1,16 @@
+{
+  "name": "IronPlate",
+  "items": [
+    {
+      "item_id": "Desc_IronPlate_C",
+      "rate": 240.0,
+      "recipe_id": null,
+      "outsourced": false,
+      "ingredients": [],
+      "uuid": "2f61145399ec45bfb93874805bceb49b",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

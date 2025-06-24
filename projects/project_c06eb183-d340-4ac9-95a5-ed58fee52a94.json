@@ -1,0 +1,59 @@
+{
+  "name": "ReinforcedPlate",
+  "items": [
+    {
+      "item_id": "Desc_IronPlateReinforced_C",
+      "rate": 5.0,
+      "recipe_id": "Recipe_IronPlateReinforced_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_IronPlate_C",
+          "rate": 30.0,
+          "recipe_id": "Recipe_IronPlate_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_IronIngot_C",
+              "rate": 45.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "4017306eea38498881d2b92d02eea6cc",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "291a9d0b2b844486b329e214ea306f76",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_IronScrew_C",
+          "rate": 60.0,
+          "recipe_id": "Recipe_Alternate_Screw_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_IronIngot_C",
+              "rate": 15.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "e5aa6f492ce94103bd78a3f0da2d4308",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "3ecc0e68ebf8426f95a6912abb649730",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "c3a71ccc80af4d19804eb8f17adce1b7",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

@@ -1,8 +1,9 @@
 /* cards.css - Styles for all card types in the Satisfactory planner */
 .card {
     border-radius: 0.5rem !important;
-    box-shadow: 8px 10px 15px rgba(100,100,100,0.8) !important;
+    box-shadow: 6px 6px 4px rgba(100,100,100,0.8) !important;
     width: 100% !important;
+    min-width: 250px !important;
     overflow: hidden !important;
 }
 .card-header {

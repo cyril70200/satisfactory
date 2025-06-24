@@ -1,0 +1,57 @@
+{
+  "name": "SuperComp-TurboMotor",
+  "items": [
+    {
+      "item_id": "Desc_ComputerSuper_C",
+      "rate": 2.5,
+      "recipe_id": "Recipe_ComputerSuper_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_Computer_C",
+          "rate": 10.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "3e4a64cd699c4ddd980bb7b6d0a17a25",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_CircuitBoardHighSpeed_C",
+          "rate": 5.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "2675985f2e154df689a6e8db4ae215f3",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_HighSpeedConnector_C",
+          "rate": 7.5,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "d19f5ae2d1e64ecc9d26f9d9a363cf89",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Plastic_C",
+          "rate": 70.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "a1f29dc93b4644d0996965450d8c81eb",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "b324260739974dc59bb6e4cddbe75085",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

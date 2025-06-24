@@ -1,0 +1,37 @@
+{
+  "name": "ModConcrete",
+  "items": [
+    {
+      "item_id": "Desc_Cement_C",
+      "rate": 240.0,
+      "recipe_id": "Recipe_Alternate_WetConcrete_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_Stone_C",
+          "rate": 360.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "d751c531e28f48d6af02e12c0b3c1d19",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Water_C",
+          "rate": 300.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "cbfd2b7de9d944bb91d2da11b9b37255",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "f6d460bf58af4057830f0623bdb41c96",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}

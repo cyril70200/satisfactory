@@ -1,0 +1,69 @@
+{
+  "name": "Fuel",
+  "items": [
+    {
+      "item_id": "Desc_Rubber_C",
+      "rate": 40.0,
+      "recipe_id": "Recipe_Alternate_RecycledRubber_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_Plastic_C",
+          "rate": 20.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "3e13130ab38b4574b1151a1d25553894",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_LiquidFuel_C",
+          "rate": 20.0,
+          "recipe_id": "Recipe_Alternate_DilutedFuel_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_HeavyOilResidue_C",
+              "rate": 10.0,
+              "recipe_id": "Recipe_Alternate_HeavyOilResidue_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_LiquidOil_C",
+                  "rate": 7.5,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "8d90d33bdb234f39857e8722164dc186",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "03487f3625654bc1b3ca553c0eb8bc67",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Water_C",
+              "rate": 20.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "47b7cb1059474ef5a418e8185bcc842b",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "dfd76e117503431188e80ccd224e22db",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "e09b350e86984671af79c1c5754dd114",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}
