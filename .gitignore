@@ -1,1 +1,31 @@
 .venv/
+*.pyc
+__pycache__/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore Python bytecode files
+# Ignore virtual environment directories
+# Ignore log files
+*.log
+# Ignore coverage reports
+.coverage
+# Ignore environment variable files
+.env
+# Ignore IDE specific files
+.idea/
+# Ignore macOS specific files
+.DS_Store
+# Ignore Windows specific files
+Thumbs.db
+# Ignore Python egg files
+*.egg
+# Ignore distribution files
+dist/
+# Ignore build directories
+build/
+# Ignore package management files
+*.egg-info/
+# Ignore test output files
+test_output/
+# Ignore documentation build directories
+docs/_build/
