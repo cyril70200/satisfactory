@@ -1,0 +1,37 @@
+{
+  "name": "MOD-Pressure cube",
+  "items": [
+    {
+      "item_id": "Desc_PressureConversionCube_C",
+      "rate": 5.0,
+      "recipe_id": "Recipe_PressureConversionCube_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_ModularFrameFused_C",
+          "rate": 5.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "67de97c92cb14e098793ed1233be0474",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_ModularFrameLightweight_C",
+          "rate": 10.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "77d45c1b68a547008e8ef34fa6bd2619",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "f5f0447dea574880ab71d71c529de73c",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

@@ -1,0 +1,140 @@
+{
+  "name": "MOD-Turbo Motor",
+  "items": [
+    {
+      "item_id": "Desc_MotorLightweight_C",
+      "rate": 1.875,
+      "recipe_id": "Recipe_MotorTurbo_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_CoolingSystem_C",
+          "rate": 7.5,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "58ecd1acf7b44194a67648f42745484b",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_ModularFrameLightweight_C",
+          "rate": 3.75,
+          "recipe_id": "Recipe_RadioControlUnit_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_AluminumCasing_C",
+              "rate": 60.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "4f0b0b7032d642cb8bc5961d4a692f12",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_CrystalOscillator_C",
+              "rate": 1.875,
+              "recipe_id": "Recipe_Alternate_CrystalOscillator_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_QuartzCrystal_C",
+                  "rate": 18.75,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "245fc16fb45c449aa912d6fa37cc5098",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Rubber_C",
+                  "rate": 13.125,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "f291c84aa73845cc924c6b157577a775",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_CircuitBoardHighSpeed_C",
+                  "rate": 1.875,
+                  "recipe_id": "Recipe_Alternate_AILimiter_Plastic_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_HighSpeedWire_C",
+                      "rate": 28.125,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "f63adb5eba1b4b0b93cbf179f13174c8",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    },
+                    {
+                      "item_id": "Desc_Plastic_C",
+                      "rate": 6.5625,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "309cf7bff35a4a8ba9e9402732e34648",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "cce9f062cbc94643b785ea75d3d8b8d3",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "c91b665b321f44649cf14d661c98bc2a",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Computer_C",
+              "rate": 3.75,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "e0550ce9df1c4df3a7fc633cf5241c1b",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "1ff38d138c2c42cc8797bd2a3f1db0ae",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Motor_C",
+          "rate": 7.5,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "de5c5e1eb4f04a1e907a9c2d2b520835",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Rubber_C",
+          "rate": 45.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "7d873a260c134847bc3e167aa7e7e0aa",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "efa2866473d44701a6964110a1a26f66",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

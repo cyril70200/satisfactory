@@ -1,0 +1,175 @@
+{
+  "name": "MOD-Motor",
+  "items": [
+    {
+      "item_id": "Desc_Motor_C",
+      "rate": 5.0,
+      "recipe_id": "Recipe_Alternate_ElectricMotor_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_ElectromagneticControlRod_C",
+          "rate": 2.5,
+          "recipe_id": "Recipe_ElectromagneticControlRod_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_Stator_C",
+              "rate": 3.75,
+              "recipe_id": "Recipe_Stator_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_SteelPipe_C",
+                  "rate": 11.25,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "55a8fc8ae1ee46f3aa4b147fa3f0f22e",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_Wire_C",
+                  "rate": 30.0,
+                  "recipe_id": "Recipe_Alternate_Wire_1_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_IronIngot_C",
+                      "rate": 16.666666666666664,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "2a3d015825964e3d9662a1a1c9341af2",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "1513575421f84ebaa55d8dd993253498",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "c7b1eb3281b44d6387140c9837488502",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_CircuitBoardHighSpeed_C",
+              "rate": 2.5,
+              "recipe_id": "Recipe_AILimiter_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_CopperSheet_C",
+                  "rate": 12.5,
+                  "recipe_id": "Recipe_Alternate_SteamedCopperSheet_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_CopperIngot_C",
+                      "rate": 12.5,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "43eca5e514634f0d9168c293dc5eb31d",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    },
+                    {
+                      "item_id": "Desc_Water_C",
+                      "rate": 12.5,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "29ee1007ccc8480cad182841235976c9",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "df1c0bb4ce4d41e685358f4b72adf7e9",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                },
+                {
+                  "item_id": "Desc_HighSpeedWire_C",
+                  "rate": 50.0,
+                  "recipe_id": "Recipe_Quickwire_C",
+                  "outsourced": false,
+                  "ingredients": [
+                    {
+                      "item_id": "Desc_GoldIngot_C",
+                      "rate": 10.0,
+                      "recipe_id": null,
+                      "outsourced": true,
+                      "ingredients": [],
+                      "uuid": "e2711768288344fe98edbf637321b092",
+                      "extra_rate": 0.0,
+                      "use_extra_rate": false
+                    }
+                  ],
+                  "uuid": "7f8284ebb49347cd9bc3e91882a32d0e",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "f9db0e589b7b48a3a6134fdb2a40f1b4",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "6851f3218fd64b279914472ea21fc4f9",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Rotor_C",
+          "rate": 5.0,
+          "recipe_id": "Recipe_Alternate_Rotor_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_SteelPipe_C",
+              "rate": 10.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "23036e28bbd14bb091022d3fd9e72fcd",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_Wire_C",
+              "rate": 30.0,
+              "recipe_id": "Recipe_Alternate_Wire_1_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_IronIngot_C",
+                  "rate": 16.666666666666664,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "bb4a5479881a4a21be2a734744aeac04",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "4b012c909fa741b29abd602f818e234b",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "bbeb88fa6bc44935b526761d529fc95a",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "80b7526ae03e44c4ac942a7d90375da2",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

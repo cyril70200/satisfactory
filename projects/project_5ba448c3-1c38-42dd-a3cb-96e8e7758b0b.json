@@ -3,19 +3,19 @@
   "items": [
     {
       "item_id": "Desc_Rubber_C",
-      "rate": 480.0,
+      "rate": 80.0,
       "recipe_id": "Recipe_Alternate_RecycledRubber_C",
       "outsourced": false,
       "ingredients": [
         {
           "item_id": "Desc_Plastic_C",
-          "rate": 240.0,
+          "rate": 40.0,
           "recipe_id": "Recipe_Plastic_C",
           "outsourced": false,
           "ingredients": [
             {
               "item_id": "Desc_LiquidOil_C",
-              "rate": 360.0,
+              "rate": 60.0,
               "recipe_id": null,
               "outsourced": true,
               "ingredients": [],
@@ -30,13 +30,13 @@
         },
         {
           "item_id": "Desc_LiquidFuel_C",
-          "rate": 240.0,
+          "rate": 40.0,
           "recipe_id": "Recipe_Alternate_DilutedFuel_C",
           "outsourced": false,
           "ingredients": [
             {
               "item_id": "Desc_HeavyOilResidue_C",
-              "rate": 120.0,
+              "rate": 20.0,
               "recipe_id": null,
               "outsourced": true,
               "ingredients": [],
@@ -46,7 +46,7 @@
             },
             {
               "item_id": "Desc_Water_C",
-              "rate": 240.0,
+              "rate": 40.0,
               "recipe_id": null,
               "outsourced": true,
               "ingredients": [],
@@ -65,5 +65,5 @@
       "use_extra_rate": false
     }
   ],
-  "dirty": false
+  "dirty": true
 }

@@ -1,0 +1,90 @@
+{
+  "name": "MOD-Computer",
+  "items": [
+    {
+      "item_id": "Desc_Computer_C",
+      "rate": 25.0,
+      "recipe_id": "Recipe_Alternate_Computer_1_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_CircuitBoard_C",
+          "rate": 100.0,
+          "recipe_id": "Recipe_Alternate_CircuitBoard_2_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_Plastic_C",
+              "rate": 142.85714285714286,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "1706a7ec2d554359941ba2c81f4e9275",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            },
+            {
+              "item_id": "Desc_HighSpeedWire_C",
+              "rate": 428.57142857142856,
+              "recipe_id": "Recipe_Quickwire_C",
+              "outsourced": false,
+              "ingredients": [
+                {
+                  "item_id": "Desc_GoldIngot_C",
+                  "rate": 85.71428571428571,
+                  "recipe_id": null,
+                  "outsourced": true,
+                  "ingredients": [],
+                  "uuid": "8e9700705a174f08bf77b68b3b190397",
+                  "extra_rate": 0.0,
+                  "use_extra_rate": false
+                }
+              ],
+              "uuid": "2d38dc44ac144b8a80048d28d31d23e2",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "327b50de257041a09b8415f5b55eea9a",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_HighSpeedWire_C",
+          "rate": 350.0,
+          "recipe_id": "Recipe_Quickwire_C",
+          "outsourced": false,
+          "ingredients": [
+            {
+              "item_id": "Desc_GoldIngot_C",
+              "rate": 70.0,
+              "recipe_id": null,
+              "outsourced": true,
+              "ingredients": [],
+              "uuid": "7d0a0a4c7982456abebcff435a2650d7",
+              "extra_rate": 0.0,
+              "use_extra_rate": false
+            }
+          ],
+          "uuid": "b02611feef054597b252d94fb718f28f",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_Rubber_C",
+          "rate": 150.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "1609c361e8414e2d8e9511d93ad2e133",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "3e4d8ff6fdbd41609dd3ba3969e2f270",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": false
+}

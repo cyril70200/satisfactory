@@ -1,0 +1,47 @@
+{
+  "name": "MOD-Fused mod frame",
+  "items": [
+    {
+      "item_id": "Desc_ModularFrameFused_C",
+      "rate": 1.5,
+      "recipe_id": "Recipe_FusedModularFrame_C",
+      "outsourced": false,
+      "ingredients": [
+        {
+          "item_id": "Desc_ModularFrameHeavy_C",
+          "rate": 1.5,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "e594ed72c4e0448684d089054ec24563",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_AluminumCasing_C",
+          "rate": 75.0,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "f13a7f6486e544a9bc7a3a2972773e0a",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        },
+        {
+          "item_id": "Desc_NitrogenGas_C",
+          "rate": 37.5,
+          "recipe_id": null,
+          "outsourced": true,
+          "ingredients": [],
+          "uuid": "2857115046a14c4cafd3d7ce995c28e1",
+          "extra_rate": 0.0,
+          "use_extra_rate": false
+        }
+      ],
+      "uuid": "6ffeb36b4a394cdca5787fefcde519e6",
+      "extra_rate": 0.0,
+      "use_extra_rate": false
+    }
+  ],
+  "dirty": true
+}
